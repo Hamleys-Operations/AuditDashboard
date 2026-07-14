@@ -1,0 +1,152 @@
+ID,Start time,Completion time,Email,Name,Last modified time,"Name of Auditor
+",ROM,Store Name,Store Code,Regional Manager,Date of Visit,"1. Was a team member present at the entrance actively greeting customers with a live toy demonstration?
+Observe for first 2 minutes after entering. Score 1 if demo is live and running. No staff pr...","2.  Were shopping bags available and placed in the designated bag stand?
+Visually inspect bag stand area. Score 1 if ALL bags are in the designated stand only. Any bag elsewhere = 0.","3.  Were sampled shelves replenished with no visible stock gaps?
+Pick 5 random shelves. Look from aisle level. Score 1 if all 5 shelves have no gap exceeding 3 cm. Any wider gap = 0.","4. Were staff deployed to sections as per the approved people mapping?
+Count sections on allocation sheet. Count sections with staff physically present. Score 1 if 100% of sections are manned. Any...","5.  Was the Hamleys Play checklist maintained and updated?
+Check Hamleys Play checklist. Count past 5 days. Score 1 if all 5 days have complete signed entry. Any missing or unsigned = 0.","6.  Was a toy observed in hand/demo use by at least 50% of floor staff during the visit?
+Count total floor staff. Count those holding/demonstrating a toy. Score 1 if ratio ≥ 50%. Below 50% = 0.","7.  Were all scheduled manned demos being conducted as per the Demo Mandate?
+Check demo mandate. Count scheduled slots at time of visit. Count slots with active demo. Score 1 if 100% of scheduled ...","8. Were no cartons observed on the sales floor during the visit?
+Check FOH floor for cartons (Score 0 immediately if any present). Then check CCTV log or supervisor sign-off for previous day. Scor...","9. Was the store temperature maintained within the approved range?
+For temperature: check thermostat display. Score 1 if reading is 22–24°C. ","10.  Were entrance animated toys functional and in good condition? 
+Test every entrance toy (press button / observe cycle). Score 1 if ALL are functional and undamaged. Any one non-functional or v...","11.  Were all gondolas and fixtures aligned as per approved planograms?
+Pull planogram print. Measure position of 5 random gondolas. Score 1 if all 5 are within ±5 cm of planogram mark. Any deviat...","12.  Were all sampled fixtures clean and free from dust?
+Finger-test 5 random fixture tops. Score 1 if all 5 are dust-free and mark-free. Even 1 failure = 0.","13.  Were self-demo products open and functional in sampled sections?
+Open demo checklist. Verify each listed unit is ON and cycling. Score 1 if 100% of listed demos are active. Any non-operationa...","14.  Were gondolas and displayed stock free from dust, tape marks, torn packaging, and missing headers?
+Pick any 5 gondolas. For each: (a) finger-test top rail — no dust; (b) no tape residue on an...","15.  Was only one promotional standee displayed at the store entrance?
+Count standees at entrance. Score 1 if count = 1. Any other count = 0.","16.  Was VM alignment completed during the previous day's closing process? 
+Check VM alignment register. Score 1 if last 5 entries exist and are MOD-signed. Missing or unsigned = 0.","17.  Was the skyline fully illuminated?
+Walk under skyline. Count any unlit or misaligned lights. Score 1 if count = 0. Any failure = 0.","18.  Were windows clean and well lit?
+Auditor stands 1 m from each window. Score 1 only if: zero visible marks AND all spots are on. Any failure = 0.","19.  Was there a clear view of the store from the entrance?
+Stand at entrance threshold and look in. Score 1 if the full store floor is visible without any obstruction higher than 1.2 m blocking t...","20.  Were all signages in good condition, correctly branded, and free from damage?
+Check all signage visible from the main aisle. Each sign must: (a) not be torn, bent, or faded; (b) use the appro...","21. Was power and colour blocking executed correctly on sampled fixtures?
+Check 3 fixtures against planogram. Score 1 if all 3 have correct power and colour blocking. Any deviation = 0.","22.  Was the VM height hierarchy followed on sampled fixtures? 
+Check height sequence in 3 wall bays. Score 1 if all 3 bays follow small-to-large bottom-to-top order. Any bay out of order = 0.","23.  Was stock displayed below the approved gondola and wall-bay height limits?
+Visually scan every gondola and wall bay. Score 1 if zero items protrude above unit height. Any item above = 0.","24.  Were impulse units merchandised correctly with approved PP communication?
+Check each impulse unit. Score 1 if ALL units are ≥80% full AND have correct PP card. Any failure = 0.","25.  Were VM guidelines followed for New, Exclusive, Best Seller, ATVD, and Hotspot zones?
+Cross-check each of the 5 VM categories against the guideline doc. Score 1 if all 5 categories are correc...","26.  Was the store façade clean and fully illuminated?
+Walk to facade. Choose 5 random surface points. Score 1 only if: all 5 surfaces are visually clean AND every visible exterior light is ON. Ev...","27.  Was the Bear costume clean, damage-free, and maintained as per cleaning schedule?","28.  Was the Customer Service Desk manned, clean, and clutter-free? 
+Observe counter. Score 1 if: staff present AND counter has only CSD equipment AND surface is clean. Any single failure = 0.","29.  Was the customer feedback register available and updated?
+Check for register. Score 1 if register is present AND open to today's date page. Missing or closed = 0.29.  Was the customer feedbac...","30.  Was the customer escalation board displayed with QR code and contact details?
+Scan QR code with phone. Score 1 if board is mounted, QR scans successfully, and contact number matches the appro...","31.  Was the birthday calling process completed as per requirements?
+
+Check birthday log for past 3 days. Score 1 if 100% of due customers have a logged contact entry. Any missed or unlogged conta...","32.  Were customer return records maintained in the return register?
+Check return register. Score 1 if present with signed entries for all returns in past 5 days. Any missing entry = 0.","33.  Was the Customer Friends & Family register maintained?
+Check register. Score 1 if present and has current-month entries. Missing or blank = 0.","34.  Was the Lost & Found register maintained?
+Lost and Found register is present. Any items logged must have: date found, item description, found by (name), and action taken. Score 1 if present a...","35.  Were First Kid celebrations completed and recorded as required?
+Check First Kid's register. Score 1 if today's (or yesterday's if <1 hr post-open) entry exists and is MOD-signed. Missing = 0.","36.  Was the cash till clean, organised, and free from clutter?
+Each till must: (a) have zero non-billing items on the counter; (b) have a minimum of 1 roll of receipt paper, 10 bags of each size,...","37.  Were billing consumables available and stored appropriately?
+Check each consumable type against its designated storage location. Score 1 if all consumables are in correct locations. Any mispl...","38.  Was the cash till staffed as per the approved rota/shift plan? 
+Pull duty roster. Count open-till slots vs actual cashiers present. Score 1 if actual ≥ scheduled. Any shortfall = 0.","39.  Were there zero unauthorized suspended or void transactions in the review period?
+Pull suspended and void transaction report for the past 7 days. Count suspended transactions not resumed with...","40. Were exactly 5 ATV driver products promoted behind the till?
+Count ATV driver products at till. Score 1 if count = 5. Any deviation = 0.","41.  Were all team members in complete approved uniform?
+Spot-check 100% of staff on the floor. Each staff member must wear: approved denim (no tears), branded T-shirt, closed-toe shoes, and name ...","42.  Did all team members meet grooming standards during the visit?
+Check grooming register. Score 1 if today's entry exists, is signed by MOD, and is timestamped at/after the scheduled time. Miss...","43. Did actual manpower match the approved duty roster?
+Roster budgeted count vs actual count at time of visit. Score 1 if actual ≥ budgeted. Any gap = 0.","44.  Was the Toys Training Sheet maintained and updated?
+Check for training sheet. Score 1 if present, current month's sheet is in use, and filed correctly. Missing or outdated = 0.","45.  Was toy training discussed during team briefings?
+Check briefing register for past 5 days. Count days with 'Toy Training' listed as agenda item. Score 1 if count ≥ 4. Below 4 = 0.","46.  Was the grooming kit properly stocked and organised?
+Check grooming kit area. Score 1 if both sections labelled, separated, and each has ≥1 backup. Any failure = 0.","47.  Was the Staff In-Out Register maintained correctly?
+Check register. Score 1 if all staff have in/out entries for past 5 days with signatures. Any missing = 0.","48.  Was the briefing register updated for the last 5 working days?
+Open briefing register. Count back 5 working days. Score 1 if all 5 days have a complete entry (date + topics + attendance + MOD...","49.  Were DSMs, SSs, FCs, and BOH team members aware of monthly KPIs and MTD achievement?
+Verbally quiz 5 random staff (2 DSM, 2 FC, 1 BOH). Score 1 if all 5 state correct target and MTD within ±5...","50.  Was the Demo Incentive Sheet updated, displayed, and understood by staff?
+Check sheet posted and current. Ask 2 BOH staff about top incentive. Score 1 if sheet is posted, current, AND both st...","51.  Was the SOM (Staff of the Month) poster current and correctly displayed?
+Check SOM poster. Score 1 if current month, correct name/photo, correct location. Any mismatch = 0.","52.  Was the timetable for Hamleys Bear/Hattie/Dino visits displayed and up to date?
+
+Check for timetable. Score 1 if present, current week visible, and legible. Missing or outdated = 0. ","53.  Was the stock room clean and inventory segregated by category?
+Check 3 zones. All 3 sub-criteria must pass for each. Score 1 if all 3 zones pass all 3 checks. Any failure = 0.","54.  Were heavier products stored on lower shelves?
+Check 3 bays. Score 1 if in all 3 bays, heavier/larger boxes are on lower shelves. Any reversal = 0.","55.  Were no cartons stored on the floor? 
+Walk BOH floor. Score 1 if zero cartons are on the floor. Any carton on floor = 0.","56.  Were no products protruding from storage shelves?
+Walk all shelves. Score 1 if zero items protrude >2 cm beyond shelf edge. Any protrusion = 0.","57. Were labels and location markings clear and readable? 
+Stand little away from each label. Score 1 if 100% are clearly readable (can read text without squinting). Any unreadable label = 0.","58.  Was inventory segregated into Damage, Consumables, QDN, Online, and Regular Inventory zones? 
+Walk each demarcated zone. Check label present and stock type is correct. Score 1 if 100% of zone...","59.  Was there no unwanted stock, old marketing material, or project material stored in BOH?
+Walk BOH. List any non-inventory/non-consumable items found. Score 1 if list is empty. Any item = 0.","60.  Did all applicable merchandise have the required soft or hard security tags?
+Pull 10 random items (MRP ≥ ₹500). Check each for tag. Score 1 if 10/10 have tags. Any untagged = 0.","61.  Were there no old damages pending in the store?
+Check damage register. Count items logged >7 days ago with no action. Score 1 if count = 0. Any item over 7 days without action = 0.","62. Were SOH and SSR reports current and compliant?
+Check both reports for today's date. Score 1 if both are current AND SSR shows zero overdue requests. Any failure = 0.","63.  Were current and previous month damage and consumable reports available and within limits?
+Pull both month reports. Score 1 if both are on file AND current month damage/consumable figures are...","64.  Was the Credit Note register maintained?
+Credit note register is present and has entries for all CNs issued, with CN number, amount, date, and customer name. Check CN register. Score 1 if pre...","65. Were Inward and Outward records maintained?
+Check both registers. Count past 5 days' entries. Score 1 if all entries exist and are signed. Any missing = 0.","66.  Were Demo, Inward, Outward, and CSD registers maintained and available for audit?
+Check each register (4 total). Count days with signed entries in past 5 working days. Score 1 if all 4 regist...","67.  Was the First Aid Register maintained and updated?
+
+First Aid register is present, has entries for every incident (if any) with date, name, and action taken. Current month's page is in use. C...","68.  Was the MM Checklist maintained?
+Check MM checklist. Count past 5 days. Score 1 if all 5 days have a complete signed entry. Any missing or unsigned = 0.","69.  Were previous days' DSRs completed correctly?
+Check DSR for past 5 days. Score 1 if all 5 are filed, complete, and signed. Any missing field or signature = 0.","70. Were KPIs tracked and updated daily?
+Check KPI tracker. Count past 5 days. Score 1 if all 5 days have actual vs. target entries. Any gap = 0.","71.  Were Distance Sale, Space & Sales Mix, Density, T500/200, and Freshness reports available and current?
+Ask for each report. Time from request to display. Score 1 if all 5 are accessible withi...","72.  Was the Store Opening/Closing Register maintained and signed by an authorised person?
+Check register for past 5 days. Verify signatures against approved signatory list. Score 1 if all 5 days ...",Any particular comments on the visit
+1,2026-06-22 11:01:01,2026-06-22 11:04:00,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Alpha One, Ahmedabad",THE2,Yogesh Mehta,2026-06-09,0,0,1,0,1,1,Not Applicable,1,1,1,0,Not Applicable,1,1,1,1,1,0,Not Applicable,1,1,1,0,,1,0,1,1,0,1,Not Applicable,1,1,0,0,Not Applicable,1,1,1,0,1,Not Applicable,1,0,1,0,1,1,Not Applicable,1,Not Applicable,1,1,0,1,1,1,Not Applicable,1,1,1,0,1,1,1,0,Not Applicable,1,1,0,1,1,
+2,2026-07-02 18:14:35,2026-07-02 19:27:23,anonymous,,,Virendra Rahevar,Shirish Mastud,Ham - Rajkot,T3AA,Yogesh Mehta,2026-06-28,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,1,0,1,0,0,1,1,1,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Paper bag to be punched at 100%, Loyalty to be daily monitor with 15% attach. target, Teddy stock to be arranged from DC"
+3,2026-07-03 11:13:18,2026-07-03 13:07:30,anonymous,,,Ashlin Moses,Ashlin Moses,Ham.Lakeshore Hyd,TBAV,Bipro Chatterjee,2026-07-03,1,Not Applicable,1,1,Not Applicable,1,1,1,1,0,1,1,0,1,Not Applicable,1,1,Not Applicable,1,1,0,0,0,0,0,1,1,Not Applicable,Not Applicable,0,Not Applicable,1,Not Applicable,0,Not Applicable,1,1,1,1,0,1,1,1,Not Applicable,1,0,1,1,1,0,0,Not Applicable,1,1,1,1,0,0,1,1,1,0,1,1,1,1,0,Not Applicable,1,1,1,1,"Lakeshore is new store with new manager. There are few lapses on process start, same is highlighted to Irshad for rectification "
+4,2026-07-03 17:00:09,2026-07-03 17:21:39,anonymous,,,Virendra Rahevar,Shirish Mastud,Hamleys - Surat,THK1,Yogesh Mehta,2026-07-03,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,0,1,1,1,0,0,0,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Facade signage few letters are flickering, Call log is already done. Spoken to FM team - awaiting quatation"
+5,2026-07-03 15:13:37,2026-07-03 19:37:39,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,"Hamleys - C21, Indore",THP2,Yogesh Mehta,2026-07-03,1,1,1,0,Not Applicable,1,1,0,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,Not Applicable,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,1,1,0,1,1,1,0,1,1,0,1,Need to focus on Old Inventory Sale. Use GWP products. 
+6,2026-07-03 19:46:02,2026-07-03 19:47:04,anonymous,,,Subodh,Chetan Chaudhari,"Hamleys - PMC,Pune",THE4,Yogesh Mehta,2026-07-03,1,1,0,Not Applicable,Not Applicable,1,Not Applicable,1,1,1,1,0,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,0,1,1,Not Applicable,Not Applicable,Not Applicable,0,0,0,0,Not Applicable,Not Applicable,0,1,1,1,1,Not Applicable,1,1,1,0,0,0,1,0,1,0,0,Not Applicable,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,0,0,0,0,0,Not Applicable,1,1,1,0,"NSO Pop up store opened on 26.05.26
+Most of basic process yet to start with.
+
+New store code: TCKK"
+7,2026-07-04 18:30:46,2026-07-04 18:43:13,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Ambuja, Raipur",THQ0,Yogesh Mehta,2026-07-04,1,1,0,1,Not Applicable,1,0,1,1,1,1,1,0,0,0,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,"Overall the store was well maintained considering No SM for few months.
+
+Pritam the new SM was absent with no information. 
+Overall hygiene was good. Few store feedback points are shared with Krishna wherever they have lost the points.
+
+"
+8,2026-07-04 15:37:00,2026-07-04 20:14:15,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,Ham -Phoenix Citadel Indore,T34O,Yogesh Mehta,2026-07-04,1,Not Applicable,0,0,1,1,0,1,1,1,1,1,1,1,0,0,1,1,1,1,Not Applicable,0,1,0,1,1,1,1,0,0,1,1,Not Applicable,1,0,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0,0,1,1,0,0,1,0,0,1,1,1,1,1,1,0,1,1,1,0,1,Store VM needs to be aligned. Segregation of stocks not done. Unnecesaary items from BOH to be removed
+9,2026-07-04 20:01:25,2026-07-04 20:29:13,anonymous,,,Narayana,Ashlin Moses,Sarath City Capital Mall - Hyd,THP5,Bipro Chatterjee,2026-07-04,1,1,1,1,1,1,0,1,1,0,1,1,0,1,1,1,1,0,1,1,1,1,1,0,1,1,1,Not Applicable,0,1,0,1,0,1,1,0,1,1,0,0,1,1,1,1,1,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,"Store Action Points
+
+All Queue Managers (Q Managers) and impulse displays must have clear price point signage.
+
+ATVD stocks should be kept behind the cash tills and not to display in the TFS section.
+
+The window display glass needs to be cleaned immediately to maintain the store's visual appeal.
+
+Grooming Key Indicators (KI) and the Grooming Checklist must be implemented and followed consistently by all team members.
+
+The First Aid Register requires immediate improvement and must be updated as per compliance standards.
+
+The FC Tracker must be maintained regularly and updated accurately on a daily basis."
+10,2026-07-05 11:35:17,2026-07-05 13:27:19,anonymous,,,Ashlin Moses,Ashlin Moses,Inorbit Mall - Hyd,THJ0,Bipro Chatterjee,2026-07-05,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,Not Applicable,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Play area pe ding points 
+Manpower plan
+Birthday plan"
+11,2026-07-05 13:44:46,2026-07-05 14:24:58,anonymous,,,Umesh ,Ashlin Moses,Airport Departure - Blr,TPV5,Bipro Chatterjee,2026-07-05,1,Not Applicable,1,1,Not Applicable,1,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,Not Applicable,0,1,Not Applicable,1,Not Applicable,Not Applicable,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Marutesh was in leave for month due to Medical conditions,given 10 Days to work on BOH Standards and floor upkeep."
+12,2026-07-05 16:20:04,2026-07-05 17:06:04,anonymous,,,Umesh ,Ashlin Moses,T2 Airport - Blr,T36O,Bipro Chatterjee,2026-07-05,1,Not Applicable,1,1,Not Applicable,0,1,1,1,Not Applicable,1,1,Not Applicable,0,1,1,Not Applicable,Not Applicable,Not Applicable,1,1,1,1,1,1,1,0,Not Applicable,0,Not Applicable,Not Applicable,0,Not Applicable,0,Not Applicable,1,1,Not Applicable,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,Not Applicable,1,0,1,0,0,0,1,Not Applicable,1,1,Not Applicable,Not Applicable,Store looks better than before 
+13,2026-07-05 20:11:06,2026-07-05 21:02:26,anonymous,,,Harnest,Ashlin Moses,UB City - Blr,THO9,Bipro Chatterjee,2026-07-06,0,1,0,0,Not Applicable,1,1,1,1,1,1,1,1,0,Not Applicable,0,1,Not Applicable,1,0,0,1,1,1,0,0,0,0,Not Applicable,0,0,1,Not Applicable,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,0,0,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,"Overall store looks good, store under staffed.
+BOH up keep is good. VM is the concern. Need to close the hiring ASAP. Should work on the points lost and  same as been discussed.."
+14,2026-07-07 12:25:17,2026-07-07 12:43:34,anonymous,,,Ashish Juyal,Lalit Mohan,Mall of India - Noida,THK0,Bipro Chatterjee,2026-07-06,1,1,0,0,1,1,1,1,0,1,1,0,1,0,1,0,0,Not Applicable,1,0,1,1,1,0,1,1,1,1,1,1,0,1,Not Applicable,0,0,1,1,1,1,1,1,1,1,0,1,0,1,1,1,0,0,0,0,1,0,1,1,Not Applicable,0,0,1,1,1,1,1,1,Not Applicable,1,1,1,1,Not Applicable,Shared detailed report surprise visit feedback  with SM 
+15,2026-07-07 18:42:10,2026-07-07 18:55:54,anonymous,,,Khubaib,Lalit Mohan,Ham. DelhiT1D,T0ZV,Bipro Chatterjee,2026-07-05,1,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,0,0,1,1,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,1,0,1,Not Applicable,1,1,1,Not Applicable,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,Not Applicable,0,0,1,1,1,1,1,Not Applicable,1,Not Applicable,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,"Critical Points 
+Break Time Register -	Not Maintained properly 
+VM SIGNAGES	Broken- Need to replace 
+BOH 	Overstocked need to maintain 
+"
+16,2026-07-07 18:29:11,2026-07-07 19:21:48,anonymous,,,Narayana,Ashlin Moses,L&T Mall - Hyd,THN3,Bipro Chatterjee,2026-07-07,1,1,0,0,Not Applicable,1,0,1,1,0,1,1,0,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,0,0,1,Not Applicable,0,1,1,1,1,0,1,1,1,0,0,0,0,1,0,1,1,0,0,0,1,1,1,1,1,0,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Store Action Points
+
+1. Implement the First Aid Register immediately.
+2. Update the daily briefing sheet without fail.
+3. Conduct toy training for the team every day.
+4. Share the weekly staff duty roster with me on time.
+5. Discuss KPIs during every briefing, and ensure all staff maintain a pocket diary.
+6. Ensure telecalling is carried out daily and tracked.
+7. Implement and maintain the Lost & Found Register.
+8. Prepare and implement the Teddy Visit Rota.
+9. Complete BOH section-wise segregation by 15th July.
+10. Improve H+ performance with immediate focus.
+11. Improve the number of customer bills through better conversion and customer engagement."
+17,2026-07-08 17:57:11,2026-07-08 18:33:57,anonymous,,,Divya Lakshmi,Divya Lakshmi,Ham.Marina,TL6C,Yogesh Mehta,2026-07-08,0,Not Applicable,0,0,Not Applicable,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,Not Applicable,Not Applicable,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Not Applicable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Store Maintenance & VM is very poor. 
+Need to take action "
+18,2026-07-10 14:10:08,2026-07-10 14:38:47,anonymous,,,Narayana,Ashlin Moses,Inorbit Mall - Hyd,THJ0,Bipro Chatterjee,2026-07-10,1,1,1,0,1,1,0,1,0,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,Not Applicable,0,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Store Action Points
+
+Ensure the Men's Grooming Kit is fully stocked with all the required contents.
+
+Park the WBC in 1444 stock.
+
+Replace the gift wrapping table top vinyl, as it is torn.
+
+Replace the damaged floor tiles, as several tiles have come loose.
+
+Share the demo details to obtain approval for the new demos.
+
+Arrange the Teddy Bear costume from L&T for the time being until the new mask is received.
+
+Complete and submit the Play RAG by 31st July.
+
+Improve NPS response collection and ensure higher customer participation"
+19,2026-07-10 13:20:35,2026-07-10 17:51:47,anonymous,,,Umesh ,Ashlin Moses,Mall Of Asia - Blr,T2MI,Bipro Chatterjee,2026-07-10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,Over all store was well maintained attracting and appealing to customers and First time VM I was Happier than Before 
+20,2026-07-12 16:47:52,2026-07-12 17:53:46,anonymous,,,Shirish Mastud,Shirish Mastud,Ham - Rajkot,T3AA,Yogesh Mehta,2026-07-12,1,0,0,1,Not Applicable,1,0,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,0,Not Applicable,0,0,1,1,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,1,1,Overall the store is good and staff is well groomed. All staff are very much attentive. Focus on doing demo and driving ATV more. Focus on achieving 100% of AOP.
