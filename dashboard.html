@@ -492,7 +492,12 @@ table.sct tbody tr.open-row{background:#fef5f5}
 // File > Share > Publish to web > select sheet > Comma-separated values (.csv) > Publish
 const CONFIG = {
   SHEET_CSV_URL: 'PASTE_YOUR_PUBLISHED_CSV_URL_HERE',
-  AUTO_REFRESH_MS: 5 * 60 * 1000 // re-fetch live data every 5 minutes
+  AUTO_REFRESH_MS: 5 * 60 * 1000, // re-fetch live data every 5 minutes
+  // Everything through this date lives permanently in data_base.csv and
+  // is never touched again. Each day's data.csv upload only contributes
+  // rows dated AFTER this cutoff — so re-uploading a full cumulative
+  // export from Forms never loses or double-counts history.
+  FREEZE_CUTOFF_DATE: '2026-07-14'
 };
 
 /* ═══ CONSTANTS ═══ */
@@ -552,6 +557,25 @@ function parseAns(v) {
   if (s==='0') return 0;
   return null;
 }
+
+// MS Forms/Excel exports of "Date of Visit" show up in different
+// formats depending on how the file was saved (ISO, or US M-D-YYYY).
+// Normalize everything to YYYY-MM-DD so date comparisons/sorting and
+// the freeze-cutoff filter work regardless of the upload's format.
+function normalizeDateStr(raw) {
+  const s = (raw||'').trim();
+  if (!s) return s;
+  if (/^\d{4}-\d{1,2}-\d{1,2}/.test(s)) {
+    const [y,m,d] = s.split(/[ T]/)[0].split('-');
+    return y + '-' + m.padStart(2,'0') + '-' + d.padStart(2,'0');
+  }
+  const md = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/);
+  if (md) {
+    const [, mm, dd, yyyy] = md;
+    return yyyy + '-' + mm.padStart(2,'0') + '-' + dd.padStart(2,'0');
+  }
+  return s;
+}
 function secScore(rawArr, sec) {
   let yes=0, tot=0;
   for (let q=sec.q1; q<=sec.qN; q++) {
@@ -597,14 +621,16 @@ function parseLiveCSV(text) {
     const ov = overallScore(ss);
     const qs = {};
     for (let q=1; q<=Q_COUNT; q++) qs['q'+q] = (raw[Q_START+q-1]||'').trim();
+    const dateNorm = normalizeDateStr(raw[META.date]);
     return {
+      id:      (raw[0]||'').trim(),
       auditor: (raw[META.auditor]||'').trim(),
       rom:     (raw[META.rom]    ||'').trim(),
       store:   (raw[META.store]  ||'').trim(),
       code:    (raw[META.code]   ||'').trim(),
       rm:      (raw[META.rm]     ||'').trim(),
-      date:    (raw[META.date]   ||'').trim(),
-      ts:      new Date((raw[META.date]||'')).getTime()||0,
+      date:    dateNorm,
+      ts:      new Date(dateNorm).getTime()||0,
       sections:{ foh:ss[0], csd:ss[1], ppl:ss[2], boh:ss[3], com:ss[4] },
       overall: ov,
       severity: severity(ov),
@@ -616,6 +642,7 @@ function parseLiveCSV(text) {
 }
 
 let _refreshing = false;
+const BASE_CSV           = './data_base.csv';
 const LOCAL_FALLBACK_CSV = './data.csv';
 const STORE_MASTER_CSV   = './store_master.csv';
 
@@ -673,26 +700,54 @@ async function loadData() {
   if (stampEl) stampEl.textContent = 'Refreshing…';
 
   try {
-    let text, sourceLabel;
+    let mergedRows, qLabelsResult, sourceLabel;
+
     if (hasLiveUrl) {
       const sep = CONFIG.SHEET_CSV_URL.indexOf('?') !== -1 ? '&' : '?';
       const url = CONFIG.SHEET_CSV_URL + sep + 'cb=' + Date.now();
       const res = await fetch(url, { cache: 'no-store' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      text = await res.text();
+      const text = await res.text();
+      const data = parseLiveCSV(text);
+      mergedRows = data.rows;
+      qLabelsResult = data.qLabels;
       sourceLabel = 'Last refreshed (live feed): ';
     } else {
-      // No live Google Sheet configured yet — fall back to the CSV
-      // bundled in this repo (data.csv) so the dashboard still works.
-      const res = await fetch(LOCAL_FALLBACK_CSV + '?cb=' + Date.now(), { cache: 'no-store' });
-      if (!res.ok) throw new Error('data.csv not found next to dashboard.html');
-      text = await res.text();
-      sourceLabel = 'Showing bundled data.csv (not live) — updated: ';
+      // Frozen historical base (data_base.csv, never changes) plus
+      // whatever is in the daily-upload file (data.csv) — but only
+      // the rows dated AFTER the freeze cutoff. So re-uploading a full
+      // cumulative export from Forms every day never loses or
+      // double-counts the frozen history.
+      const baseRes = await fetch(BASE_CSV + '?cb=' + Date.now(), { cache: 'no-store' });
+      if (!baseRes.ok) throw new Error('data_base.csv not found next to dashboard.html');
+      const baseText = await baseRes.text();
+      const baseData = parseLiveCSV(baseText);
+
+      let dailyRows = [];
+      try {
+        const dailyRes = await fetch(LOCAL_FALLBACK_CSV + '?cb=' + Date.now(), { cache: 'no-store' });
+        if (dailyRes.ok) {
+          const dailyText = await dailyRes.text();
+          dailyRows = parseLiveCSV(dailyText).rows;
+        }
+      } catch (e) {
+        console.warn('data.csv (daily upload) not loaded — showing frozen base only:', e.message);
+      }
+
+      const baseIds = new Set(baseData.rows.map(r => r.id).filter(Boolean));
+      const newRows = dailyRows.filter(r =>
+        r.date > CONFIG.FREEZE_CUTOFF_DATE && !baseIds.has(r.id)
+      );
+
+      mergedRows = [...baseData.rows, ...newRows];
+      qLabelsResult = baseData.qLabels;
+      sourceLabel = newRows.length
+        ? ('Frozen base + ' + newRows.length + ' new since ' + CONFIG.FREEZE_CUTOFF_DATE + ' — updated: ')
+        : ('Showing frozen base through ' + CONFIG.FREEZE_CUTOFF_DATE + ' — updated: ');
     }
 
-    const data = parseLiveCSV(text);
-    allRows = applyStoreMaster(data.rows);
-    qLabels = data.qLabels;
+    allRows = applyStoreMaster(mergedRows);
+    qLabels = qLabelsResult;
 
     document.getElementById('empty').style.display = 'none';
     document.getElementById('dash').style.display = 'flex';
@@ -706,7 +761,7 @@ async function loadData() {
       document.getElementById('dash').style.display = 'none';
       document.getElementById('empty-msg').textContent = hasLiveUrl
         ? ('Could not load live data (' + err.message + '). Check the published Sheet link is correct and shared publicly, then try Refresh.')
-        : ('Could not load data.csv (' + err.message + '). Make sure data.csv sits next to dashboard.html in the repo, or set CONFIG.SHEET_CSV_URL to a live feed.');
+        : ('Could not load data_base.csv (' + err.message + '). Make sure data_base.csv sits next to dashboard.html in the repo, or set CONFIG.SHEET_CSV_URL to a live feed.');
     } else if (stampEl) {
       stampEl.textContent = 'Refresh failed — showing last loaded data';
     }
