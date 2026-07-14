@@ -175,6 +175,11 @@ select.fs:focus,input.fs:focus{outline:none;border-color:var(--red);box-shadow:0
 
 /* ── STORE SCORECARD ── */
 .tbl-scroll{overflow-x:auto}
+.pagination{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:12px 20px;border-top:1px solid var(--border)}
+.pg-btn{height:28px;padding:0 12px;border:1px solid var(--border);border-radius:var(--rs);background:var(--surface);color:var(--navy-mid);font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s}
+.pg-btn:hover:not(:disabled){border-color:var(--red);color:var(--red);background:var(--red-light)}
+.pg-btn:disabled{opacity:.4;cursor:not-allowed}
+.pg-info{font-size:12px;color:var(--muted)}
 table.sct{width:100%;border-collapse:collapse;font-size:12px;min-width:860px}
 table.sct th{
   padding:9px 12px;text-align:left;font-size:10px;font-weight:700;
@@ -427,6 +432,10 @@ table.sct tbody tr.open-row{background:#fef5f5}
     <div class="panel">
       <div class="ph">
         <div><div class="pt">Store Scorecard</div></div>
+        <button class="nbtn" id="btn-export-scorecard" style="color:var(--navy-mid);border-color:var(--border)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export
+        </button>
       </div>
       <div style="padding:0">
         <div class="tbl-scroll">
@@ -435,6 +444,7 @@ table.sct tbody tr.open-row{background:#fef5f5}
             <tbody id="sct-body"></tbody>
           </table>
         </div>
+        <div class="pagination" id="sct-pagination"></div>
       </div>
     </div>
 
@@ -497,6 +507,8 @@ const SECTIONS = [
 /* ═══ STATE ═══ */
 let allRows = [], filteredRows = [], qLabels = [];
 let sortState = { col: 'overall', dir: 'desc' };
+let tablePage = 1;
+const TABLE_PAGE_SIZE = 5;
 let secChart = null;
 
 /* ═══ COLOURS ═══ */
@@ -798,6 +810,7 @@ function applyFilters() {
   document.getElementById('f-count').textContent  = filteredRows.length + ' audits';
   document.getElementById('f-stores').textContent = stores.length + ' stores';
 
+  tablePage = 1;
   renderAll();
 }
 
@@ -954,6 +967,7 @@ function renderTable() {
     th.onclick = ()=>{
       if(sortState.col===col.key) sortState.dir=sortState.dir==='asc'?'desc':'asc';
       else { sortState.col=col.key; sortState.dir='desc'; }
+      tablePage = 1;
       renderTable();
     };
     hrow.appendChild(th);
@@ -966,10 +980,30 @@ function renderTable() {
 
   if (!recent.length) {
     tbody.innerHTML=`<tr><td colspan="${cols.length}" style="text-align:center;padding:40px;color:var(--muted)">No audits match the current filters</td></tr>`;
+    document.getElementById('sct-pagination').innerHTML = '';
     return;
   }
 
-  recent.forEach(row => {
+  // Paginate — show TABLE_PAGE_SIZE audits per page
+  const totalPages = Math.max(1, Math.ceil(recent.length / TABLE_PAGE_SIZE));
+  if (tablePage > totalPages) tablePage = totalPages;
+  if (tablePage < 1) tablePage = 1;
+  const pageStart = (tablePage - 1) * TABLE_PAGE_SIZE;
+  const pageRows = recent.slice(pageStart, pageStart + TABLE_PAGE_SIZE);
+
+  const pagEl = document.getElementById('sct-pagination');
+  pagEl.innerHTML = `
+    <span class="pg-info">Showing ${pageStart+1}–${Math.min(pageStart+TABLE_PAGE_SIZE, recent.length)} of ${recent.length} audits</span>
+    <button class="pg-btn" id="pg-prev" ${tablePage<=1?'disabled':''}>‹ Prev</button>
+    <span class="pg-info">Page ${tablePage} of ${totalPages}</span>
+    <button class="pg-btn" id="pg-next" ${tablePage>=totalPages?'disabled':''}>Next ›</button>
+  `;
+  const prevBtn = document.getElementById('pg-prev');
+  const nextBtn = document.getElementById('pg-next');
+  if (prevBtn) prevBtn.onclick = () => { tablePage--; renderTable(); };
+  if (nextBtn) nextBtn.onclick = () => { tablePage++; renderTable(); };
+
+  pageRows.forEach(row => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-weight:700;color:var(--navy);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${row.store||''}">${row.store||'—'}</td>
@@ -1328,6 +1362,35 @@ document.getElementById('btn-export').onclick = () => {
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
   a.download = 'hamleys_audit_' + new Date().toISOString().split('T')[0] + '.csv';
+  a.click();
+};
+
+// Store Scorecard export — mirrors exactly what the table shows
+// (Store, Site Code, Auditor, Date, section scores, Overall, Status),
+// covering every filtered audit (not just the current page on screen).
+document.getElementById('btn-export-scorecard').onclick = () => {
+  if (!filteredRows.length) return;
+  const rowsSorted = filteredRows.slice().sort((a,b) => {
+    let va = a[sortState.col], vb = b[sortState.col];
+    if (sortState.col==='overall') { va=a.overall??-1; vb=b.overall??-1; }
+    SECTIONS.forEach(s=>{ if(sortState.col==='sec_'+s.key){va=a.sections[s.key]??-1;vb=b.sections[s.key]??-1;} });
+    if (typeof va==='string') va=va.toLowerCase();
+    if (typeof vb==='string') vb=vb.toLowerCase();
+    va=va??''; vb=vb??'';
+    const c = va<vb?-1:va>vb?1:0;
+    return sortState.dir==='asc'?c:-c;
+  });
+  const headers = ['Store','Site Code','Auditor','Date',
+    ...SECTIONS.map(s=>s.label+' %'),'Overall %','Status'];
+  const rows = rowsSorted.map(r=>[
+    r.store||'', r.code||'', r.auditor||'', r.date||'',
+    ...SECTIONS.map(s=>r.sections[s.key]!==null?r.sections[s.key].toFixed(1):''),
+    r.overall!==null?r.overall.toFixed(1):'', r.severity||''
+  ]);
+  const csv = [headers, ...rows].map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download = 'hamleys_store_scorecard_' + new Date().toISOString().split('T')[0] + '.csv';
   a.click();
 };
 
