@@ -106,12 +106,13 @@ nav{
 }
 .fg{display:flex;flex-direction:column;gap:3px}
 .fl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
-select.fs{
+select.fs,input.fs{
   height:32px;padding:0 8px;border:1px solid var(--border);border-radius:var(--rs);
   background:var(--bg);color:var(--text);font-family:inherit;font-size:13px;
   min-width:152px;cursor:pointer;transition:border-color .15s
 }
-select.fs:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 2px rgba(200,16,46,.1)}
+input.fs{cursor:text}
+select.fs:focus,input.fs:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 2px rgba(200,16,46,.1)}
 .fsp{flex:1;min-width:8px}
 .f-meta{text-align:right}
 #f-count{font-size:13px;font-weight:700;color:var(--navy)}
@@ -363,6 +364,9 @@ table.sct tbody tr.open-row{background:#fef5f5}
         <select class="fs" id="f-aud"><option value="">All Auditors</option></select></div>
       <div class="fg"><label class="fl">Store</label>
         <select class="fs" id="f-store"><option value="">All Stores</option></select></div>
+      <div class="fg"><label class="fl">Site Code</label>
+        <input class="fs" id="f-code" list="code-datalist" placeholder="Search code…" autocomplete="off"/>
+        <datalist id="code-datalist"></datalist></div>
       <div class="fsp"></div>
       <div class="f-meta">
         <div id="f-count">— audits</div>
@@ -419,20 +423,10 @@ table.sct tbody tr.open-row{background:#fef5f5}
       </div>
     </div>
 
-    <!-- TREND CHART -->
-    <div class="panel">
-      <div class="ph">
-        <div><div class="pt">Score Trend — All Audits</div>
-        <div class="ps">Overall score over time · per store when filtered, aggregate otherwise</div></div>
-      </div>
-      <div class="pb"><div id="trend-wrap"><canvas id="trend-chart"></canvas></div></div>
-    </div>
-
     <!-- STORE SCORECARD TABLE -->
     <div class="panel">
       <div class="ph">
-        <div><div class="pt">Store Scorecard</div>
-        <div class="ps">Most recent audit per store · click row to expand all section questions</div></div>
+        <div><div class="pt">Store Scorecard</div></div>
       </div>
       <div style="padding:0">
         <div class="tbl-scroll">
@@ -503,7 +497,7 @@ const SECTIONS = [
 /* ═══ STATE ═══ */
 let allRows = [], filteredRows = [], qLabels = [];
 let sortState = { col: 'overall', dir: 'desc' };
-let secChart = null, trendChart = null;
+let secChart = null;
 
 /* ═══ COLOURS ═══ */
 const PALETTE = ['#C8102E','#1a2340','#d97706','#0891b2','#16a34a','#7c3aed','#db2777','#059669','#ea580c','#0284c7'];
@@ -721,16 +715,32 @@ async function init() {
 
 /* ═══ DROPDOWNS ═══ */
 function buildDropdowns(rows) {
+  const romNames = new Set(uniq(rows, 'rom'));
+  // SD list should only contain genuine Store Directors — exclude anyone
+  // who also shows up as an ROM (some people hold both roles for
+  // different stores in the master mapping).
+  const sdOnly = uniq(rows, 'sd').filter(v => !romNames.has(v));
+  // Auditor filter doubles as a people search: auditor + ROM + SD names,
+  // so picking an ROM/SD shows every store under them, not just visits
+  // they personally conducted.
+  const peopleNames = uniqMulti(rows, ['auditor','rom','sd']);
+
   fill('f-rom',   uniq(rows,'rom'),   'All ROMs');
-  fill('f-sd',    uniq(rows,'sd'),    'All SDs');
+  fill('f-sd',    sdOnly,             'All SDs');
   fill('f-rm',    uniq(rows,'rm'),    'All RMs');
-  fill('f-aud',   uniq(rows,'auditor'),'All Auditors');
+  fill('f-aud',   peopleNames,        'All Auditors');
   fill('f-store', uniq(rows,'store'), 'All Stores');
+  fillDatalist('code-datalist', uniq(rows, 'code'));
+
   ['f-rom','f-sd','f-rm','f-aud','f-store'].forEach(id => {
     document.getElementById(id).onchange = applyFilters;
   });
+  const codeInput = document.getElementById('f-code');
+  if (codeInput) codeInput.oninput = applyFilters;
+
   document.getElementById('f-clear').onclick = () => {
     ['f-rom','f-sd','f-rm','f-aud','f-store'].forEach(id => { document.getElementById(id).value=''; });
+    if (codeInput) codeInput.value = '';
     applyFilters();
   };
 }
@@ -747,8 +757,20 @@ function fill(id, vals, def) {
   });
 }
 
+function fillDatalist(id, vals) {
+  const dl = document.getElementById(id);
+  if (!dl) return;
+  dl.innerHTML = vals.map(v => `<option value="${v}"></option>`).join('');
+}
+
 function uniq(rows, key) {
   return [...new Set(rows.map(r=>r[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+}
+
+function uniqMulti(rows, keys) {
+  const set = new Set();
+  rows.forEach(r => keys.forEach(k => { if (r[k]) set.add(r[k]); }));
+  return [...set].sort((a,b)=>a.localeCompare(b));
 }
 
 /* ═══ FILTER ═══ */
@@ -758,14 +780,18 @@ function applyFilters() {
   const rm    = gv('f-rm');
   const aud   = gv('f-aud');
   const store = gv('f-store');
+  const code  = (gv('f-code')||'').trim().toLowerCase();
 
   // All audits on file — no recency cap
   filteredRows = allRows.filter(r =>
     (!rom   || r.rom     === rom)   &&
     (!sd    || r.sd      === sd)    &&
     (!rm    || r.rm      === rm)    &&
-    (!aud   || r.auditor === aud)   &&
-    (!store || r.store   === store)
+    // Auditor filter also matches ROM/SD names, so selecting a person
+    // in either role shows every store under them.
+    (!aud   || r.auditor === aud || r.rom === aud || r.sd === aud) &&
+    (!store || r.store   === store) &&
+    (!code  || (r.code||'').toLowerCase().includes(code))
   );
 
   const stores = [...new Set(filteredRows.map(r=>r.store).filter(Boolean))];
@@ -797,7 +823,6 @@ function renderAll() {
 
   renderKPIs();
   renderSections();
-  renderTrend();
   renderTable();
   if (singleStore) {
     renderProgress();
@@ -893,70 +918,9 @@ function renderSections() {
   });
 }
 
-/* ─── TREND ─── */
-function renderTrend() {
-  if (trendChart) trendChart.destroy();
-  const ctx = document.getElementById('trend-chart').getContext('2d');
-  const storeFilter = gv('f-store');
-
-  // Group by store, sort each by date
-  const byStore = {};
-  filteredRows.forEach(r => {
-    const k = r.store||'Unknown';
-    if(!byStore[k]) byStore[k]=[];
-    byStore[k].push(r);
-  });
-  Object.values(byStore).forEach(a=>a.sort((a,b)=>a.ts-b.ts));
-
-  const storeKeys = Object.keys(byStore);
-  let datasets;
-
-  if (storeKeys.length <= 8) {
-    // One line per store
-    datasets = storeKeys.map((store,i) => ({
-      label: store,
-      data: byStore[store].map(r=>({x:r.date, y:r.overall!==null?+r.overall.toFixed(1):null})),
-      borderColor: PALETTE[i%PALETTE.length],
-      backgroundColor:'transparent',
-      tension:.35, pointRadius:5, borderWidth:2, spanGaps:true
-    }));
-  } else {
-    // Aggregate: average per date
-    const byDate = {};
-    filteredRows.forEach(r=>{
-      if(!r.date) return;
-      if(!byDate[r.date]) byDate[r.date]=[];
-      if(r.overall!==null) byDate[r.date].push(r.overall);
-    });
-    const dates = Object.keys(byDate).sort();
-    datasets = [{
-      label:'All Stores (avg)',
-      data: dates.map(d=>({x:d, y:byDate[d].length?+avg(byDate[d]).toFixed(1):null})),
-      borderColor:'#C8102E', backgroundColor:'rgba(200,16,46,.1)',
-      fill:true, tension:.35, pointRadius:5, spanGaps:true
-    }];
-  }
-
-  trendChart = new Chart(ctx, {
-    type:'line', data:{datasets},
-    options:{
-      responsive:true, maintainAspectRatio:false,
-      interaction:{mode:'index',intersect:false},
-      plugins:{
-        legend:{display:datasets.length>1,position:'top',labels:{font:{size:11},boxWidth:12}},
-        tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y!==null?c.parsed.y+'%':'N/A'}`}}
-      },
-      scales:{
-        x:{type:'category',ticks:{font:{size:11},maxRotation:45},grid:{color:'#f1f5f9'}},
-        y:{min:0,max:100,ticks:{callback:v=>v+'%',font:{size:11}},grid:{color:'#f1f5f9'}}
-      }
-    }
-  });
-}
-
 /* ─── STORE TABLE ─── */
 function renderTable() {
-  const recent = mostRecent(filteredRows);
+  const recent = filteredRows.slice();
   recent.sort((a,b) => {
     let va = a[sortState.col], vb = b[sortState.col];
     if (sortState.col==='overall') { va=a.overall??-1; vb=b.overall??-1; }
@@ -971,10 +935,8 @@ function renderTable() {
   // Header
   const cols = [
     {key:'store',   label:'Store'},
-    {key:'rom',     label:'ROM'},
-    {key:'sd',      label:'SD'},
+    {key:'code',    label:'Site Code'},
     {key:'auditor', label:'Auditor'},
-    {key:'rm',      label:'Reg. Manager'},
     {key:'date',    label:'Date'},
     ...SECTIONS.map(s=>({key:'sec_'+s.key, label:s.short})),
     {key:'overall', label:'Overall'},
@@ -1003,7 +965,7 @@ function renderTable() {
   tbody.innerHTML='';
 
   if (!recent.length) {
-    tbody.innerHTML=`<tr><td colspan="${cols.length}" style="text-align:center;padding:40px;color:var(--muted)">No stores match the current filters</td></tr>`;
+    tbody.innerHTML=`<tr><td colspan="${cols.length}" style="text-align:center;padding:40px;color:var(--muted)">No audits match the current filters</td></tr>`;
     return;
   }
 
@@ -1011,10 +973,8 @@ function renderTable() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-weight:700;color:var(--navy);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${row.store||''}">${row.store||'—'}</td>
-      <td>${row.rom||'—'}</td>
-      <td>${row.sd||'—'}</td>
+      <td>${row.code||'—'}</td>
       <td>${row.auditor||'—'}</td>
-      <td>${row.rm||'—'}</td>
       <td style="white-space:nowrap">${row.date||'—'}</td>
       ${SECTIONS.map(s=>{
         const sc=row.sections[s.key];
@@ -1024,13 +984,13 @@ function renderTable() {
       <td><span class="sev ${sevCls(row.severity)}">${row.severity||'—'}</span></td>
     `;
 
-    // Build expanded detail — tabs for each audit of this store
+    // Each row is now a single specific audit — its expanded detail
+    // shows just that audit's own checklist (no multi-audit tabs needed).
     const detRow = document.createElement('tr');
     detRow.className = 'det-row';
     const detTd = document.createElement('td');
     detTd.colSpan = cols.length;
-    const storeAudits = filteredRows.filter(r=>r.store===row.store).sort((a,b)=>b.ts-a.ts);
-    detTd.innerHTML = `<div class="det-inner">${buildDetail(storeAudits)}</div>`;
+    detTd.innerHTML = `<div class="det-inner">${buildDetail([row])}</div>`;
     detRow.appendChild(detTd);
 
     tr.onclick = () => {
