@@ -261,21 +261,23 @@ table.prev tr:nth-child(even) td{background:var(--bg)}
 'use strict';
 
 /* ─── EXACT COLUMN MAPPING for Hamleys MS Forms export ─── */
-// Col indices (0-based) after PapaParse with header:false
-// [0] Id  [1] Start time  [2] Completion time  [3] Email  [4] Name
-// [5] Name of Auditor\n  [6] ROM  [7] Store Name  [8] Store Code
-// [9] Regional Manager  [10] Date of Visit
-// [11..82] Q1..Q72
+// Col indices (0-based) after PapaParse with header:false — matches the
+// real export, which has an extra "Last modified time" column before
+// "Name of Auditor" (this must stay identical to dashboard.html's mapping):
+// [0] ID  [1] Start time  [2] Completion time  [3] Email  [4] Name
+// [5] Last modified time  [6] Name of Auditor  [7] ROM  [8] Store Name
+// [9] Store Code  [10] Regional Manager  [11] Date of Visit
+// [12..83] Q1..Q72
 const META = {
-  auditor:  5,   // "Name of Auditor\n"
-  rom:      6,   // "ROM"
-  store:    7,   // "Store Name"
-  code:     8,   // "Store Code"
-  rm:       9,   // "Regional Manager"
-  date:     10,  // "Date of Visit"
+  auditor:  6,   // "Name of Auditor"
+  rom:      7,   // "ROM"
+  store:    8,   // "Store Name"
+  code:     9,   // "Store Code"
+  rm:       10,  // "Regional Manager"
+  date:     11,  // "Date of Visit"
 };
-const Q_START = 11;
-const Q_END   = 82;   // inclusive — 72 questions
+const Q_START = 12;
+const Q_END   = 83;   // inclusive — 72 questions
 const Q_COUNT = Q_END - Q_START + 1; // 72
 
 const SECTIONS = [
