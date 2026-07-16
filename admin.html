@@ -200,8 +200,14 @@ table.prev tr:nth-child(even) td{background:var(--bg)}
       <input type="password" id="gh-token" placeholder="ghp_… or github_pat_…" autocomplete="off"
         style="flex:1;min-width:220px;height:36px;padding:0 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:inherit;font-size:13px"/>
       <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);white-space:nowrap">
-        <input type="checkbox" id="gh-token-remember"/> Remember for this browser session
+        <input type="checkbox" id="gh-token-remember" checked/> Remember on this device
       </label>
+      <button type="button" id="gh-token-forget" style="height:32px;padding:0 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);color:var(--muted);font-size:12px;cursor:pointer;font-family:inherit">Forget saved token</button>
+    </div>
+    <div style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6">
+      "Remember on this device" keeps the token in this browser only (not sent anywhere but GitHub),
+      so you only paste it once and every future upload just needs the CSV. Use "Forget saved token"
+      before handing this computer to anyone else, or if you rotate/revoke the token.
     </div>
   </div>
 
@@ -403,10 +409,10 @@ function handleFile(file) {
 // dashboard.html at render time, so this just needs to overwrite data.csv
 // with whatever was dropped in — no merging needed here.
 const REPO_CONFIG = { owner: 'hamleys-operations', repo: 'AuditDashboard', branch: 'main', path: 'data.csv' };
-const TOKEN_SESSION_KEY = 'gh_pat_hamleys_audit';
+const TOKEN_STORAGE_KEY = 'gh_pat_hamleys_audit';
 
 (function restoreToken() {
-  const remembered = sessionStorage.getItem(TOKEN_SESSION_KEY);
+  const remembered = localStorage.getItem(TOKEN_STORAGE_KEY);
   if (remembered) {
     document.getElementById('gh-token').value = remembered;
     document.getElementById('gh-token-remember').checked = true;
@@ -414,7 +420,13 @@ const TOKEN_SESSION_KEY = 'gh_pat_hamleys_audit';
 })();
 
 document.getElementById('gh-token-remember').addEventListener('change', e => {
-  if (!e.target.checked) sessionStorage.removeItem(TOKEN_SESSION_KEY);
+  if (!e.target.checked) localStorage.removeItem(TOKEN_STORAGE_KEY);
+});
+
+document.getElementById('gh-token-forget').addEventListener('click', () => {
+  localStorage.removeItem(TOKEN_STORAGE_KEY);
+  document.getElementById('gh-token').value = '';
+  document.getElementById('gh-token-remember').checked = false;
 });
 
 function getToken() {
@@ -427,7 +439,9 @@ async function publishToGitHub(rawText, filename) {
     throw new Error('Paste a GitHub token above first — write access to the repo is required to publish.');
   }
   if (document.getElementById('gh-token-remember').checked) {
-    sessionStorage.setItem(TOKEN_SESSION_KEY, token);
+    localStorage.setItem(TOKEN_STORAGE_KEY, token);
+  } else {
+    localStorage.removeItem(TOKEN_STORAGE_KEY);
   }
 
   const api = `https://api.github.com/repos/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/contents/${REPO_CONFIG.path}`;
