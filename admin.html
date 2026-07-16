@@ -172,7 +172,7 @@ table.prev tr:nth-child(even) td{background:var(--bg)}
 <div class="page">
   <div class="page-head">
     <h1>Upload Audit CSV</h1>
-    <p>Drop your Microsoft Forms export below. The dashboard reads it instantly from your browser — nothing is sent to any server.</p>
+    <p>Drop your Microsoft Forms export below — it publishes straight to the live dashboard on GitHub automatically, for anyone with the link to see.</p>
   </div>
 
   <!-- HOW TO STEPS -->
@@ -183,6 +183,25 @@ table.prev tr:nth-child(even) td{background:var(--bg)}
       <div class="step"><div class="step-num">2</div>Click <strong>Open in Excel</strong> (downloads .xlsx)</div>
       <div class="step"><div class="step-num">3</div>In Excel → <strong>File → Save As → CSV UTF-8 (.csv)</strong></div>
       <div class="step"><div class="step-num">4</div>Drop that .csv file below ↓</div>
+    </div>
+  </div>
+
+  <!-- GITHUB PUBLISH ACCESS -->
+  <div class="card" style="padding:20px 24px">
+    <div class="steps-title" style="margin-bottom:10px">GitHub publish access</div>
+    <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px">
+      Uploads here publish straight to <strong>data.csv</strong> in the
+      <strong>hamleys-operations/AuditDashboard</strong> repo. Paste a GitHub Personal Access
+      Token with write access to this repo (Settings → Developer settings → Fine-grained tokens →
+      scope it to just this repository, permission: Contents — Read and write). Treat this token
+      like a password — anyone who has it can push to the repo.
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <input type="password" id="gh-token" placeholder="ghp_… or github_pat_…" autocomplete="off"
+        style="flex:1;min-width:220px;height:36px;padding:0 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:inherit;font-size:13px"/>
+      <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);white-space:nowrap">
+        <input type="checkbox" id="gh-token-remember"/> Remember for this browser session
+      </label>
     </div>
   </div>
 
@@ -209,6 +228,7 @@ table.prev tr:nth-child(even) td{background:var(--bg)}
       <span class="res-icon">✅</span>
       <div class="res-title" id="res-title">Upload complete</div>
       <div class="res-sub" id="res-sub"></div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Published to GitHub — the live dashboard will pick this up within a minute or two.</div>
       <div class="stat-grid" id="stat-grid"></div>
       <div id="preview-wrap">
         <div class="prev-title">Preview — first 5 rows</div>
@@ -227,20 +247,6 @@ table.prev tr:nth-child(even) td{background:var(--bg)}
       <button class="retry-btn" onclick="resetUpload()">Try again</button>
     </div>
 
-  </div>
-
-  <!-- SAVED SESSIONS -->
-  <div class="sessions-wrap">
-    <div class="sec-head">
-      <div>
-        <div class="sec-head-title">Saved upload history</div>
-        <div class="sec-head-sub">Dashboard always uses the most recently saved file.</div>
-      </div>
-      <button class="clear-all-btn" onclick="clearAll()">Clear all</button>
-    </div>
-    <div class="sec-body">
-      <div id="sessions-list"></div>
-    </div>
   </div>
 
 </div>
@@ -376,49 +382,87 @@ function handleFile(file) {
   document.getElementById('proc-msg').textContent = 'Reading ' + file.name + '…';
 
   const reader = new FileReader();
-  reader.onload = e => {
+  reader.onload = async e => {
     try {
       document.getElementById('proc-msg').textContent = 'Scoring rows…';
       const data = parseCSV(e.target.result, file.name);
-      saveSession(data);
+      document.getElementById('proc-msg').textContent = 'Publishing to GitHub…';
+      await publishToGitHub(e.target.result, file.name);
       showResult(data, file.name);
     } catch(err) {
-      showErr('Processing error', err.message);
+      showErr('Could not publish', err.message);
     }
   };
   reader.onerror = () => showErr('File read error', 'Could not read the file. Try re-saving as CSV UTF-8.');
   reader.readAsText(file, 'UTF-8');
 }
 
-/* ─── SAVE SESSION ─── */
-const STORAGE_KEY = 'hamleys_audit_sessions';
-const MAX_SESSIONS = 5;
+/* ─── PUBLISH TO GITHUB ─── */
+// Uploading here pushes the raw CSV straight into data.csv on GitHub via
+// the Contents API. The frozen-base/dedup-by-ID merge logic lives in
+// dashboard.html at render time, so this just needs to overwrite data.csv
+// with whatever was dropped in — no merging needed here.
+const REPO_CONFIG = { owner: 'hamleys-operations', repo: 'AuditDashboard', branch: 'main', path: 'data.csv' };
+const TOKEN_SESSION_KEY = 'gh_pat_hamleys_audit';
 
-function getSessions() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]'); } catch(e) { return []; }
+(function restoreToken() {
+  const remembered = sessionStorage.getItem(TOKEN_SESSION_KEY);
+  if (remembered) {
+    document.getElementById('gh-token').value = remembered;
+    document.getElementById('gh-token-remember').checked = true;
+  }
+})();
+
+document.getElementById('gh-token-remember').addEventListener('change', e => {
+  if (!e.target.checked) sessionStorage.removeItem(TOKEN_SESSION_KEY);
+});
+
+function getToken() {
+  return document.getElementById('gh-token').value.trim();
 }
 
-function saveSession(data) {
-  let sessions = getSessions();
-  while (sessions.length >= MAX_SESSIONS) sessions.shift();
-  const label = new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  sessions.push({
-    id: Date.now().toString(),
-    label,
-    filename: data.filename,
-    savedAt: new Date().toISOString(),
-    rowCount: data.rows.length,
-    rows: data.rows,
-    qLabels: data.qLabels,
-  });
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
-  } catch(e) {
-    // Storage quota — drop oldest
-    sessions.shift();
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
+async function publishToGitHub(rawText, filename) {
+  const token = getToken();
+  if (!token) {
+    throw new Error('Paste a GitHub token above first — write access to the repo is required to publish.');
   }
-  renderSessions();
+  if (document.getElementById('gh-token-remember').checked) {
+    sessionStorage.setItem(TOKEN_SESSION_KEY, token);
+  }
+
+  const api = `https://api.github.com/repos/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/contents/${REPO_CONFIG.path}`;
+  const headers = {
+    'Authorization': 'Bearer ' + token,
+    'Accept': 'application/vnd.github+json',
+  };
+
+  // 1. Get the current file's SHA — required by GitHub to update an existing file
+  const getRes = await fetch(api + '?ref=' + REPO_CONFIG.branch, { headers });
+  if (getRes.status === 401) throw new Error('GitHub rejected the token (401). Check it\'s valid and not expired.');
+  if (getRes.status === 404) throw new Error('data.csv not found in the repo — check it exists on the ' + REPO_CONFIG.branch + ' branch.');
+  if (!getRes.ok) throw new Error('Could not read the current file from GitHub (HTTP ' + getRes.status + ').');
+  const getJson = await getRes.json();
+  const sha = getJson.sha;
+
+  // 2. Push the new content
+  const b64 = btoa(unescape(encodeURIComponent(rawText)));
+  const putRes = await fetch(api, {
+    method: 'PUT',
+    headers: Object.assign({}, headers, { 'Content-Type': 'application/json' }),
+    body: JSON.stringify({
+      message: 'Update data.csv via Upload Audit CSV (' + filename + ')',
+      content: b64,
+      sha: sha,
+      branch: REPO_CONFIG.branch,
+    }),
+  });
+  if (putRes.status === 401) throw new Error('GitHub rejected the token while publishing (401) — it may lack write access to this repo.');
+  if (putRes.status === 409) throw new Error('Publish conflict — someone else updated the file at the same moment. Try again.');
+  if (!putRes.ok) {
+    const errJson = await putRes.json().catch(() => ({}));
+    throw new Error('GitHub publish failed (HTTP ' + putRes.status + '): ' + (errJson.message || 'unknown error'));
+  }
+  return true;
 }
 
 /* ─── SHOW RESULT ─── */
@@ -475,38 +519,8 @@ function showErr(title, msg) {
 }
 function resetUpload() { fileInput.value=''; document.getElementById('preview-wrap').style.display='none'; setState('upload'); }
 
-/* ─── SESSIONS LIST ─── */
-function renderSessions() {
-  const sessions = getSessions();
-  const el = document.getElementById('sessions-list');
-  if (!sessions.length) { el.innerHTML='<div class="empty-sess">No uploads saved yet.</div>'; return; }
-  const sorted = [...sessions].reverse();
-  el.innerHTML = sorted.map((s,i) => `
-    <div class="sess-row">
-      <div>
-        <div class="si-label">${s.label}${i===0?'<span class="latest-tag">Latest</span>':''}</div>
-        <div class="si-meta">${s.filename} · ${s.rowCount} rows</div>
-      </div>
-      <button class="del-btn" onclick="deleteSession('${s.id}')">Remove</button>
-    </div>
-  `).join('');
-}
-
-function deleteSession(id) {
-  if (!confirm('Remove this upload?')) return;
-  const s = getSessions().filter(x=>x.id!==id);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
-  renderSessions();
-}
-function clearAll() {
-  if (!confirm('Remove ALL uploads? The dashboard will show no data until you upload again.')) return;
-  localStorage.removeItem(STORAGE_KEY);
-  renderSessions();
-}
-
 /* ─── INIT ─── */
 setState('upload');
-renderSessions();
 </script>
 </body>
 </html>

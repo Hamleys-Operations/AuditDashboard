@@ -734,16 +734,18 @@ async function loadData() {
         console.warn('data.csv (daily upload) not loaded — showing frozen base only:', e.message);
       }
 
+      // Dedupe purely by ID, not by date. A "new" audit is simply any
+      // row whose ID isn't already in the frozen base — some audits get
+      // submitted late and carry an earlier Date of Visit, so filtering
+      // on date alone would silently drop legitimate new records.
       const baseIds = new Set(baseData.rows.map(r => r.id).filter(Boolean));
-      const newRows = dailyRows.filter(r =>
-        r.date > CONFIG.FREEZE_CUTOFF_DATE && !baseIds.has(r.id)
-      );
+      const newRows = dailyRows.filter(r => r.id && !baseIds.has(r.id));
 
       mergedRows = [...baseData.rows, ...newRows];
       qLabelsResult = baseData.qLabels;
       sourceLabel = newRows.length
-        ? ('Frozen base + ' + newRows.length + ' new since ' + CONFIG.FREEZE_CUTOFF_DATE + ' — updated: ')
-        : ('Showing frozen base through ' + CONFIG.FREEZE_CUTOFF_DATE + ' — updated: ');
+        ? ('Frozen base + ' + newRows.length + ' new audit(s) — updated: ')
+        : ('Showing frozen base (' + baseData.rows.length + ' audits) — updated: ');
     }
 
     allRows = applyStoreMaster(mergedRows);
