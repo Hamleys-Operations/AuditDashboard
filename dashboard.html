@@ -226,6 +226,8 @@ table.sct tbody tr.open-row{background:#fef5f5}
 .audit-content.show{display:block}
 
 .det-secs{display:flex;flex-wrap:wrap;gap:16px}
+.det-comment{background:var(--red-light);border:1px solid var(--red-mid);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:var(--text);line-height:1.6}
+.det-comment strong{color:var(--red);display:block;font-size:10px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
 .det-sec{flex:1;min-width:210px}
 .det-sec-title{
   font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;
@@ -372,6 +374,10 @@ table.sct tbody tr.open-row{background:#fef5f5}
       <div class="fg"><label class="fl">Site Code</label>
         <input class="fs" id="f-code" list="code-datalist" placeholder="Search code…" autocomplete="off"/>
         <datalist id="code-datalist"></datalist></div>
+      <div class="fg"><label class="fl">Visit Date From</label>
+        <input type="date" class="fs" id="f-date-from"/></div>
+      <div class="fg"><label class="fl">Visit Date To</label>
+        <input type="date" class="fs" id="f-date-to"/></div>
       <div class="fsp"></div>
       <div class="f-meta">
         <div id="f-count">— audits</div>
@@ -662,6 +668,7 @@ function parseLiveCSV(text) {
       sections:{ foh:ss[0], csd:ss[1], ppl:ss[2], boh:ss[3], com:ss[4] },
       overall: ov,
       severity: severity(ov),
+      comments: (raw[Q_END+1]||'').trim(),
       qs,
     };
   }).filter(r => r.store || r.rom);
@@ -829,14 +836,14 @@ function buildDropdowns(rows) {
   fill('f-store', uniq(rows,'store'), 'All Stores');
   fillDatalist('code-datalist', uniq(rows, 'code'));
 
-  ['f-rom','f-sd','f-rm','f-aud','f-store'].forEach(id => {
+  ['f-rom','f-sd','f-rm','f-aud','f-store','f-date-from','f-date-to'].forEach(id => {
     document.getElementById(id).onchange = applyFilters;
   });
   const codeInput = document.getElementById('f-code');
   if (codeInput) codeInput.oninput = applyFilters;
 
   document.getElementById('f-clear').onclick = () => {
-    ['f-rom','f-sd','f-rm','f-aud','f-store'].forEach(id => { document.getElementById(id).value=''; });
+    ['f-rom','f-sd','f-rm','f-aud','f-store','f-date-from','f-date-to'].forEach(id => { document.getElementById(id).value=''; });
     if (codeInput) codeInput.value = '';
     applyFilters();
   };
@@ -878,6 +885,8 @@ function applyFilters() {
   const aud   = gv('f-aud');
   const store = gv('f-store');
   const code  = (gv('f-code')||'').trim().toLowerCase();
+  const dateFrom = gv('f-date-from'); // native <input type=date> already gives YYYY-MM-DD
+  const dateTo   = gv('f-date-to');
 
   // All audits on file — no recency cap
   filteredRows = allRows.filter(r =>
@@ -888,7 +897,9 @@ function applyFilters() {
     // in either role shows every store under them.
     (!aud   || r.auditor === aud || r.rom === aud || r.sd === aud) &&
     (!store || r.store   === store) &&
-    (!code  || (r.code||'').toLowerCase().includes(code))
+    (!code  || (r.code||'').toLowerCase().includes(code)) &&
+    (!dateFrom || (r.date && r.date >= dateFrom)) &&
+    (!dateTo   || (r.date && r.date <= dateTo))
   );
 
   const stores = [...new Set(filteredRows.map(r=>r.store).filter(Boolean))];
@@ -1140,6 +1151,7 @@ function buildDetail(audits) {
   // Audit content panes
   const panes = audits.map((a,i)=>`
     <div class="audit-content${i===0?' show':''}" data-tab="${i}">
+      ${a.comments ? `<div class="det-comment"><strong>Comments on the visit</strong>${a.comments}</div>` : ''}
       <div class="det-secs">
         ${SECTIONS.map(sec=>{
           const secSc = a.sections[sec.key];
