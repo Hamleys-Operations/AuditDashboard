@@ -634,6 +634,22 @@ function severity(pct) {
   return 'Excellent';
 }
 
+// Real MS Forms submissions sometimes have the Auditor field typed with a
+// middle name/initial or a nickname instead of the exact ROM/SD name used
+// in store_master.csv (e.g. "Lalit P Mohan" vs "Lalit Mohan"). Since Visit
+// Completion now matches audits to a person by exact Auditor-name equality,
+// any such variant must be normalized to the canonical name here, or that
+// person's own visits silently fail to count. Add new variants as they're
+// spotted in fresh data.
+const AUDITOR_ALIASES = {
+  'Lalit P Mohan': 'Lalit Mohan',
+  'Param': 'Paramjeet',
+};
+function canonicalAuditor(raw) {
+  const n = (raw || '').trim();
+  return AUDITOR_ALIASES[n] || n;
+}
+
 function parseLiveCSV(text) {
   const result = Papa.parse(text, { skipEmptyLines:true });
   let rows = result.data;
@@ -662,7 +678,7 @@ function parseLiveCSV(text) {
     const dateNorm = normalizeDateStr(raw[META.date]);
     return {
       id:      (raw[0]||'').trim(),
-      auditor: (raw[META.auditor]||'').trim(),
+      auditor: canonicalAuditor(raw[META.auditor]),
       rom:     (raw[META.rom]    ||'').trim(),
       store:   (raw[META.store]  ||'').trim(),
       code:    (raw[META.code]   ||'').trim(),
