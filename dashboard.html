@@ -644,6 +644,7 @@ function severity(pct) {
 const AUDITOR_ALIASES = {
   'Lalit P Mohan': 'Lalit Mohan',
   'Param': 'Paramjeet',
+  'Sarath': 'Sarath SG',
 };
 function canonicalAuditor(raw) {
   const n = (raw || '').trim();
@@ -842,17 +843,29 @@ async function init() {
 
 /* ═══ DROPDOWNS ═══ */
 function buildDropdowns(rows) {
-  const romNames = new Set(uniq(rows, 'rom'));
+  // Seed from store_master.csv as well as the audit data itself — a ROM
+  // or SD who's been newly assigned stores but has zero audits on file
+  // yet would otherwise be completely absent from these dropdowns.
+  const masterRoms = new Set();
+  const masterSds = new Set();
+  storeMaster.forEach(m => {
+    if (m.rom) masterRoms.add(m.rom);
+    if (m.sd)  masterSds.add(m.sd);
+  });
+
+  const romNames = new Set([...uniq(rows, 'rom'), ...masterRoms]);
   // SD list should only contain genuine Store Directors — exclude anyone
   // who also shows up as an ROM (some people hold both roles for
   // different stores in the master mapping).
-  const sdOnly = uniq(rows, 'sd').filter(v => !romNames.has(v));
+  const sdOnly = [...new Set([...uniq(rows, 'sd'), ...masterSds])]
+    .filter(v => !romNames.has(v)).sort((a,b)=>a.localeCompare(b));
   // Auditor filter doubles as a people search: auditor + ROM + SD names,
   // so picking an ROM/SD shows every store under them, not just visits
   // they personally conducted.
-  const peopleNames = uniqMulti(rows, ['auditor','rom','sd']);
+  const peopleNames = [...new Set([...uniqMulti(rows, ['auditor','rom','sd']), ...masterRoms, ...masterSds])]
+    .sort((a,b)=>a.localeCompare(b));
 
-  fill('f-rom',   uniq(rows,'rom'),   'All ROMs');
+  fill('f-rom',   [...romNames].sort((a,b)=>a.localeCompare(b)), 'All ROMs');
   fill('f-sd',    sdOnly,             'All SDs');
   fill('f-rm',    uniq(rows,'rm'),    'All RMs');
   fill('f-aud',   peopleNames,        'All Auditors');
