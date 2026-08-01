@@ -470,6 +470,34 @@ table.sct tbody tr.open-row{background:#fef5f5}
       </div>
     </div>
 
+    <!-- ROM & SD VISIT COMPLETION -->
+    <div class="panel">
+      <div class="ph">
+        <div>
+          <div class="pt">Visit Completion</div>
+          <div class="ps">% of assigned stores audited at least once, under current filters</div>
+        </div>
+        <div class="audit-tab-bar" style="margin:0">
+          <button class="atab on" id="comp-tab-rom" type="button">By ROM</button>
+          <button class="atab" id="comp-tab-sd" type="button">By SD</button>
+        </div>
+      </div>
+      <div class="pb">
+        <div id="comp-rom-wrap">
+          <table class="stbl" id="comp-rom-table">
+            <thead><tr><th>ROM</th><th class="r">Total Stores</th><th class="r">Audited</th><th class="r">% Visit Completion</th></tr></thead>
+            <tbody id="comp-rom-body"></tbody>
+          </table>
+        </div>
+        <div id="comp-sd-wrap" style="display:none">
+          <table class="stbl" id="comp-sd-table">
+            <thead><tr><th>SD</th><th class="r">Total Stores</th><th class="r">Audited</th><th class="r">% Visit Completion</th></tr></thead>
+            <tbody id="comp-sd-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <!-- CRITICAL ALERTS -->
     <div class="panel">
       <div class="ph">
@@ -899,6 +927,7 @@ function renderAll() {
   } else {
     renderHeatmap();
   }
+  renderCompletion();
   renderAlerts();
 }
 
@@ -1158,6 +1187,69 @@ function renderHeatmap() {
       <div class="h-sev" style="color:${scCol(r.overall)}">${r.severity}</div>
     </div>`).join('');
 }
+
+/* ─── ROM & SD VISIT COMPLETION ─── */
+// "Total stores" comes from store_master.csv (every store ever assigned
+// to that person), independent of audits. "Audited" counts distinct
+// store codes that have at least one audit in the current filtered set.
+function computeCompletion(names, totalsMap, roleKey) {
+  const auditedSets = new Map();
+  names.forEach(n => auditedSets.set(n, new Set()));
+  filteredRows.forEach(r => {
+    const n = r[roleKey];
+    if (n && auditedSets.has(n) && r.code) auditedSets.get(n).add(r.code);
+  });
+  return names.map(n => {
+    const total = totalsMap.get(n) || 0;
+    const audited = auditedSets.get(n).size;
+    const pct = total ? (audited / total * 100) : null;
+    return { name: n, total, audited, pct };
+  }).sort((a, b) => (b.pct ?? -1) - (a.pct ?? -1));
+}
+
+function renderCompletionRows(tbodyId, rows, emptyLabel) {
+  const tbody = document.getElementById(tbodyId);
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;padding:20px;color:var(--muted)">${emptyLabel}</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td style="font-weight:600;color:var(--navy)">${r.name}</td>
+      <td class="r">${r.total}</td>
+      <td class="r">${r.audited}</td>
+      <td class="r"><span class="sp ${scCls(r.pct)}">${r.pct!==null ? r.pct.toFixed(0)+'%' : '—'}</span></td>
+    </tr>`).join('');
+}
+
+function renderCompletion() {
+  const romTotals = new Map();
+  const sdTotalsRaw = new Map();
+  storeMaster.forEach(m => {
+    if (m.rom) romTotals.set(m.rom, (romTotals.get(m.rom) || 0) + 1);
+    if (m.sd)  sdTotalsRaw.set(m.sd, (sdTotalsRaw.get(m.sd) || 0) + 1);
+  });
+  const romNames = [...romTotals.keys()].sort((a, b) => a.localeCompare(b));
+  // Same rule as the SD filter dropdown: exclude names that are also ROMs.
+  const sdNames = [...sdTotalsRaw.keys()].filter(n => !romTotals.has(n)).sort((a, b) => a.localeCompare(b));
+  const sdTotals = new Map(sdNames.map(n => [n, sdTotalsRaw.get(n)]));
+
+  renderCompletionRows('comp-rom-body', computeCompletion(romNames, romTotals, 'rom'), 'No ROM data');
+  renderCompletionRows('comp-sd-body',  computeCompletion(sdNames,  sdTotals,  'sd'),  'No SD data');
+}
+
+document.getElementById('comp-tab-rom').onclick = () => {
+  document.getElementById('comp-tab-rom').classList.add('on');
+  document.getElementById('comp-tab-sd').classList.remove('on');
+  document.getElementById('comp-rom-wrap').style.display = '';
+  document.getElementById('comp-sd-wrap').style.display = 'none';
+};
+document.getElementById('comp-tab-sd').onclick = () => {
+  document.getElementById('comp-tab-sd').classList.add('on');
+  document.getElementById('comp-tab-rom').classList.remove('on');
+  document.getElementById('comp-sd-wrap').style.display = '';
+  document.getElementById('comp-rom-wrap').style.display = 'none';
+};
 
 /* ─── ALERTS ─── */
 function renderAlerts() {
