@@ -125,7 +125,7 @@ select.fs:focus,input.fs:focus{outline:none;border-color:var(--red);box-shadow:0
 #f-clear:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
 
 /* ── KPI CARDS ── */
-#kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+#kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .kc{
   background:var(--surface);border:1px solid var(--border);
   border-radius:var(--r);padding:18px 20px;
@@ -136,12 +136,15 @@ select.fs:focus,input.fs:focus{outline:none;border-color:var(--red);box-shadow:0
 .kc.red::before{background:linear-gradient(90deg,var(--red),#e84060)}
 .kc.green::before{background:linear-gradient(90deg,var(--green),#22c55e)}
 .kc.amber::before{background:linear-gradient(90deg,var(--amber),#f59e0b)}
+.kc.teal::before{background:linear-gradient(90deg,var(--teal),#22d3ee)}
 .kc-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
 .kc-val{font-size:32px;font-weight:800;line-height:1;margin-bottom:4px;color:var(--text)}
 .kc-val.red{color:var(--red)}.kc-val.green{color:var(--green)}
 .kc-trend{font-size:11px;font-weight:700;margin-bottom:2px;min-height:16px}
 .tu{color:var(--green)}.td{color:var(--red)}.tf2{color:var(--muted)}
 .kc-sub{font-size:11px;color:var(--muted)}
+.kc-bar{width:100%;height:6px;border-radius:20px;background:var(--bg);overflow:hidden;margin:8px 0 6px}
+.kc-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--teal),#22d3ee);transition:width .3s ease}
 
 /* ── PANEL ── */
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
@@ -305,6 +308,7 @@ table.sct tbody tr.open-row{background:#fef5f5}
 }
 
 /* ── RESPONSIVE ── */
+@media(max-width:1200px){#kpis{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:960px){#kpis{grid-template-columns:repeat(2,1fr)}#sec-grid{grid-template-columns:1fr}}
 @media(max-width:560px){#kpis{grid-template-columns:1fr}#main{padding:12px 12px 40px}}
 </style>
@@ -412,6 +416,12 @@ table.sct tbody tr.open-row{background:#fef5f5}
         <div class="kc-val" id="k-total">—</div>
         <div class="kc-trend"></div>
         <div class="kc-sub">In current view</div>
+      </div>
+      <div class="kc teal">
+        <div class="kc-lbl">Store Coverage</div>
+        <div class="kc-val" id="k-cov-pct">—</div>
+        <div class="kc-bar"><div class="kc-bar-fill" id="k-cov-bar" style="width:0%"></div></div>
+        <div class="kc-sub" id="k-cov-sub">— of — stores audited</div>
       </div>
     </div>
 
@@ -992,6 +1002,19 @@ function renderKPIs() {
 
   const crit = mostRecent(filteredRows).filter(r=>r.overall!==null&&r.overall<50);
   document.getElementById('k-crit').textContent = crit.length;
+
+  // Store Coverage — how many distinct stores (out of every store on
+  // file in store_master.csv) have at least one audit under the current
+  // filters, regardless of who conducted it.
+  const totalStores = storeMaster.size;
+  const auditedCodes = new Set(filteredRows.map(r => (r.code||'').trim().toUpperCase()).filter(Boolean));
+  const coveredStores = [...auditedCodes].filter(c => storeMaster.has(c)).length;
+  const covPct = totalStores ? (coveredStores/totalStores*100) : null;
+  document.getElementById('k-cov-pct').textContent = covPct!==null ? covPct.toFixed(0)+'%' : '—';
+  document.getElementById('k-cov-sub').textContent = totalStores
+    ? `${coveredStores} of ${totalStores} stores audited`
+    : '— of — stores audited';
+  document.getElementById('k-cov-bar').style.width = (covPct!==null ? covPct : 0) + '%';
 
   // Trend arrow: compare first half vs second half
   document.getElementById('k-trend').innerHTML = '';
