@@ -125,7 +125,7 @@ select.fs:focus,input.fs:focus{outline:none;border-color:var(--red);box-shadow:0
 #f-clear:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
 
 /* ── KPI CARDS ── */
-#kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+#kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .kc{
   background:var(--surface);border:1px solid var(--border);
   border-radius:var(--r);padding:18px 20px;
@@ -250,12 +250,6 @@ table.sct tbody tr.open-row{background:#fef5f5}
 .det-qv.na{color:var(--muted)}
 
 /* ── SCORE HEATMAP ── */
-.heat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
-.hcell{border-radius:8px;padding:10px 12px;cursor:default;transition:transform .15s}
-.hcell:hover{transform:scale(1.03)}
-.h-store{font-size:11px;font-weight:700;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.h-score{font-size:24px;font-weight:800;margin:3px 0}
-.h-sev{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;opacity:.7}
 
 /* ── CRITICAL ALERTS ── */
 #alerts-list{display:flex;flex-direction:column;gap:10px}
@@ -308,7 +302,6 @@ table.sct tbody tr.open-row{background:#fef5f5}
 }
 
 /* ── RESPONSIVE ── */
-@media(max-width:1200px){#kpis{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:960px){#kpis{grid-template-columns:repeat(2,1fr)}#sec-grid{grid-template-columns:1fr}}
 @media(max-width:560px){#kpis{grid-template-columns:1fr}#main{padding:12px 12px 40px}}
 </style>
@@ -399,12 +392,6 @@ table.sct tbody tr.open-row{background:#fef5f5}
         <div class="kc-trend" id="k-trend"></div>
         <div class="kc-sub">Across filtered audits</div>
       </div>
-      <div class="kc green">
-        <div class="kc-lbl">Audits Passing</div>
-        <div class="kc-val" id="k-pass">—</div>
-        <div class="kc-trend" id="k-pass-t"></div>
-        <div class="kc-sub">Score ≥ 85%</div>
-      </div>
       <div class="kc red">
         <div class="kc-lbl">Critical Stores</div>
         <div class="kc-val red" id="k-crit">—</div>
@@ -463,15 +450,6 @@ table.sct tbody tr.open-row{background:#fef5f5}
         </div>
         <div class="pagination" id="sct-pagination"></div>
       </div>
-    </div>
-
-    <!-- HEATMAP: shown only when no single store selected -->
-    <div class="panel" id="heat-panel">
-      <div class="ph">
-        <div><div class="pt">Store Score Overview</div>
-        <div class="ps">Most recent overall score per store</div></div>
-      </div>
-      <div class="pb"><div class="heat-grid" id="heat-grid"></div></div>
     </div>
 
     <!-- STORE PROGRESS: shown only when a single store is selected -->
@@ -577,12 +555,6 @@ function scCls(s){
   if(s>=85) return 'sp-g';
   if(s>=65) return 'sp-a';
   return 'sp-r';
-}
-function heatBg(s){
-  if(s===null) return '#f1f5f9';
-  if(s>=85) return '#dcfce7';
-  if(s>=65) return '#fef3c7';
-  return '#fee2e2';
 }
 function sevCls(sv){
   return {Critical:'sev-c','At Risk':'sev-a',Good:'sev-g',Excellent:'sev-e'}[sv]||'';
@@ -972,18 +944,13 @@ function renderAll() {
   const storeFilter = gv('f-store');
   const singleStore = !!storeFilter;
 
-  // Toggle panels: heatmap for overview, progress for single-store drill-down
-  document.getElementById('heat-panel').style.display = singleStore ? 'none' : '';
-  document.getElementById('prog-panel').style.display = singleStore ? ''     : 'none';
+  // Progress panel only makes sense once a specific store is selected.
+  document.getElementById('prog-panel').style.display = singleStore ? '' : 'none';
 
   renderKPIs();
   renderSections();
   renderTable();
-  if (singleStore) {
-    renderProgress();
-  } else {
-    renderHeatmap();
-  }
+  if (singleStore) renderProgress();
   renderCompletion();
   renderAlerts();
 }
@@ -995,10 +962,6 @@ function renderKPIs() {
 
   document.getElementById('k-avg').textContent   = avgScore!==null ? avgScore.toFixed(1)+'%' : '—';
   document.getElementById('k-total').textContent = filteredRows.length;
-
-  const pass = valid.filter(r=>r.overall>=85);
-  document.getElementById('k-pass').textContent = valid.length
-    ? (pass.length/valid.length*100).toFixed(0)+'%' : '—';
 
   const crit = mostRecent(filteredRows).filter(r=>r.overall!==null&&r.overall<50);
   document.getElementById('k-crit').textContent = crit.length;
@@ -1018,7 +981,6 @@ function renderKPIs() {
 
   // Trend arrow: compare first half vs second half
   document.getElementById('k-trend').innerHTML = '';
-  document.getElementById('k-pass-t').innerHTML = '';
   if (valid.length >= 4) {
     const sorted = [...valid].sort((a,b)=>a.ts-b.ts);
     const h = Math.floor(sorted.length/2);
@@ -1240,23 +1202,6 @@ function buildQList(sec, row) {
     html += `<div class="det-q"><span class="det-ql">${short}</span><span class="det-qv ${cls}">${txt}</span></div>`;
   }
   return html;
-}
-
-/* ─── HEATMAP ─── */
-function renderHeatmap() {
-  const grid = document.getElementById('heat-grid');
-  const recent = mostRecent(filteredRows)
-    .filter(r=>r.overall!==null)
-    .sort((a,b)=>a.overall-b.overall);
-
-  if (!recent.length) { grid.innerHTML='<div style="color:var(--muted);font-size:13px">No data</div>'; return; }
-
-  grid.innerHTML = recent.map(r=>`
-    <div class="hcell" style="background:${heatBg(r.overall)}">
-      <div class="h-store" title="${r.store||''}">${(r.store||'—').replace(/^Ham(leys)?[\s\-\.]+/i,'')}</div>
-      <div class="h-score" style="color:${scCol(r.overall)}">${r.overall.toFixed(0)}%</div>
-      <div class="h-sev" style="color:${scCol(r.overall)}">${r.severity}</div>
-    </div>`).join('');
 }
 
 /* ─── ROM & SD VISIT COMPLETION ─── */
