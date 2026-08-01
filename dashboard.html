@@ -527,17 +527,20 @@ const CONFIG = {
 };
 
 /* ═══ CONSTANTS ═══ */
-// Checklist was edited: Q9 (store temperature), Q29 (customer feedback
-// register), and Q33 (Friends & Family register) were removed, leaving
-// 69 questions instead of 72. q1/qN below are POSITIONAL indices within
-// the Q_START..Q_END column range (not the printed form question number),
-// remapped to match where each surviving question now actually sits.
+// Checklist was edited in stages: Q9 (store temperature), Q29 (customer
+// feedback register), and Q33 (Friends & Family register) were removed
+// first; then the two trailing Compliance questions — "Distance Sale /
+// Space & Sales Mix / Density / T500 / Freshness reports" and "Store
+// Opening/Closing Register" — were dropped too. q1/qN below are
+// POSITIONAL indices within Q_START..Q_END (not the printed form question
+// number). Positions 68-69 are intentionally left uncovered by any
+// section below, so they're simply never scored or displayed.
 const SECTIONS = [
   { key:'foh', label:'FOH & Visual Merchandising', short:'FOH & VM',    q1:1,  qN:26 },
   { key:'csd', label:'Customer Service & Till',    short:'CSD & Till',  q1:27, qN:37 },
   { key:'ppl', label:'People & Training',          short:'People',      q1:38, qN:49 },
   { key:'boh', label:'Back of House & Inventory',  short:'BOH & Inv',   q1:50, qN:63 },
-  { key:'com', label:'Compliance & Admin',         short:'Compliance',  q1:64, qN:69 },
+  { key:'com', label:'Compliance & Admin',         short:'Compliance',  q1:64, qN:67 },
 ];
 
 /* ═══ STATE ═══ */
@@ -1168,6 +1171,13 @@ function renderTable() {
 function buildDetail(audits) {
   if (!audits.length) return '<div style="color:var(--muted);font-size:12px">No audit data</div>';
 
+  // Comments live at the very top, above even the date/audit tab bar —
+  // it's the first thing a reviewer should see (each row is a single
+  // audit, so there's only ever one comment to show here).
+  const topComment = audits[0].comments
+    ? `<div class="det-comment"><strong>Comments on the visit</strong>${audits[0].comments}</div>`
+    : '';
+
   // Tab buttons
   const tabBar = audits.map((a,i)=>`
     <button class="atab${i===0?' on':''}" onclick="switchAuditTab(this,${i})" type="button">
@@ -1177,7 +1187,6 @@ function buildDetail(audits) {
   // Audit content panes
   const panes = audits.map((a,i)=>`
     <div class="audit-content${i===0?' show':''}" data-tab="${i}">
-      ${a.comments ? `<div class="det-comment"><strong>Comments on the visit</strong>${a.comments}</div>` : ''}
       <div class="det-secs">
         ${SECTIONS.map(sec=>{
           const secSc = a.sections[sec.key];
@@ -1193,7 +1202,7 @@ function buildDetail(audits) {
       </div>
     </div>`).join('');
 
-  return `<div class="audit-tab-bar">${tabBar}</div>${panes}`;
+  return `${topComment}<div class="audit-tab-bar">${tabBar}</div>${panes}`;
 }
 
 function buildQList(sec, row) {
