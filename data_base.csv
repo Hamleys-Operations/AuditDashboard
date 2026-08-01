@@ -1,4 +1,4 @@
-ID,Start time,Completion time,Email,Name,Last modified time,"Name of Auditor
+﻿ID,Start time,Completion time,Email,Name,Last modified time,"Name of Auditor
 ",ROM,Store Name,Store Code,Regional Manager,Date of Visit,"1. Was a team member present at the entrance actively greeting customers with a live toy demonstration?
 Observe for first 2 minutes after entering. Score 1 if demo is live and running. No staff pr...","2.  Were shopping bags available and placed in the designated bag stand?
 Visually inspect bag stand area. Score 1 if ALL bags are in the designated stand only. Any bag elsewhere = 0.","3.  Were sampled shelves replenished with no visible stock gaps?
@@ -74,23 +74,23 @@ Check DSR for past 5 days. Score 1 if all 5 are filed, complete, and signed. Any
 Check KPI tracker. Count past 5 days. Score 1 if all 5 days have actual vs. target entries. Any gap = 0.","71.  Were Distance Sale, Space & Sales Mix, Density, T500/200, and Freshness reports available and current?
 Ask for each report. Time from request to display. Score 1 if all 5 are accessible withi...","72.  Was the Store Opening/Closing Register maintained and signed by an authorised person?
 Check register for past 5 days. Verify signatures against approved signatory list. Score 1 if all 5 days ...",Any particular comments on the visit
-1,6-22-26 11:01:01,6-22-26 11:04:00,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Alpha One, Ahmedabad",THE2,Yogesh Mehta,2026-06-09,0,0,1,0,1,1,Not Applicable,1,1,1,0,Not Applicable,1,1,1,1,1,0,Not Applicable,1,1,1,0,,1,0,1,1,0,1,Not Applicable,1,1,0,0,Not Applicable,1,1,1,0,1,Not Applicable,1,0,1,0,1,1,Not Applicable,1,Not Applicable,1,1,0,1,1,1,Not Applicable,1,1,1,0,1,1,1,0,Not Applicable,1,1,0,1,1,
-2,7-2-26 18:14:35,7-2-26 19:27:23,anonymous,,,Virendra Rahevar,Shirish Mastud,Ham - Rajkot,T3AA,Yogesh Mehta,2026-06-28,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,1,0,1,0,0,1,1,1,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Paper bag to be punched at 100%, Loyalty to be daily monitor with 15% attach. target, Teddy stock to be arranged from DC"
-3,7-3-26 11:13:18,7-3-26 13:07:30,anonymous,,,Ashlin Moses,Ashlin Moses,Ham.Lakeshore Hyd,TBAV,Bipro Chatterjee,2026-07-03,1,Not Applicable,1,1,Not Applicable,1,1,1,1,0,1,1,0,1,Not Applicable,1,1,Not Applicable,1,1,0,0,0,0,0,1,1,Not Applicable,Not Applicable,0,Not Applicable,1,Not Applicable,0,Not Applicable,1,1,1,1,0,1,1,1,Not Applicable,1,0,1,1,1,0,0,Not Applicable,1,1,1,1,0,0,1,1,1,0,1,1,1,1,0,Not Applicable,1,1,1,1,"Lakeshore is new store with new manager. There are few lapses on process start, same is highlighted to Irshad for rectification "
-4,7-3-26 17:00:09,7-3-26 17:21:39,anonymous,,,Virendra Rahevar,Shirish Mastud,Hamleys - Surat,THK1,Yogesh Mehta,2026-07-03,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,0,1,1,1,0,0,0,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Facade signage few letters are flickering, Call log is already done. Spoken to FM team - awaiting quatation"
-5,7-3-26 15:13:37,7-3-26 19:37:39,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,"Hamleys - C21, Indore",THP2,Yogesh Mehta,2026-07-03,1,1,1,0,Not Applicable,1,1,0,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,Not Applicable,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,1,1,0,1,1,1,0,1,1,0,1,Need to focus on Old Inventory Sale. Use GWP products. 
-6,7-3-26 19:46:02,7-3-26 19:47:04,anonymous,,,Subodh,Chetan Chaudhari,"Hamleys - PMC,Pune",THE4,Yogesh Mehta,2026-07-03,1,1,0,Not Applicable,Not Applicable,1,Not Applicable,1,1,1,1,0,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,0,1,1,Not Applicable,Not Applicable,Not Applicable,0,0,0,0,Not Applicable,Not Applicable,0,1,1,1,1,Not Applicable,1,1,1,0,0,0,1,0,1,0,0,Not Applicable,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,0,0,0,0,0,Not Applicable,1,1,1,0,"NSO Pop up store opened on 26.05.26
+1,6-22-26 11:01:01,6-22-26 11:04:00,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Alpha One, Ahmedabad",THE2,Yogesh Mehta,6-9-2026,0,0,1,0,1,1,Not Applicable,1,1,1,0,Not Applicable,1,1,1,1,1,0,Not Applicable,1,1,1,0,,1,0,1,1,0,1,Not Applicable,1,1,0,0,Not Applicable,1,1,1,0,1,Not Applicable,1,0,1,0,1,1,Not Applicable,1,Not Applicable,1,1,0,1,1,1,Not Applicable,1,1,1,0,1,1,1,0,Not Applicable,1,1,0,1,1,
+2,7-2-26 18:14:35,7-2-26 19:27:23,anonymous,,,Virendra Rahevar,Shirish Mastud,Ham - Rajkot,T3AA,Yogesh Mehta,6-28-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,1,0,1,0,0,1,1,1,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Paper bag to be punched at 100%, Loyalty to be daily monitor with 15% attach. target, Teddy stock to be arranged from DC"
+3,7-3-26 11:13:18,7-3-26 13:07:30,anonymous,,,Ashlin Moses,Ashlin Moses,Ham.Lakeshore Hyd,TBAV,Bipro Chatterjee,7-3-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,1,0,1,1,0,1,Not Applicable,1,1,Not Applicable,1,1,0,0,0,0,0,1,1,Not Applicable,Not Applicable,0,Not Applicable,1,Not Applicable,0,Not Applicable,1,1,1,1,0,1,1,1,Not Applicable,1,0,1,1,1,0,0,Not Applicable,1,1,1,1,0,0,1,1,1,0,1,1,1,1,0,Not Applicable,1,1,1,1,"Lakeshore is new store with new manager. There are few lapses on process start, same is highlighted to Irshad for rectification "
+4,7-3-26 17:00:09,7-3-26 17:21:39,anonymous,,,Virendra Rahevar,Shirish Mastud,Hamleys - Surat,THK1,Yogesh Mehta,7-3-2026,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,0,1,1,1,0,0,0,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Facade signage few letters are flickering, Call log is already done. Spoken to FM team - awaiting quatation"
+5,7-3-26 15:13:37,7-3-26 19:37:39,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,"Hamleys - C21, Indore",THP2,Yogesh Mehta,7-3-2026,1,1,1,0,Not Applicable,1,1,0,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,Not Applicable,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,1,1,0,1,1,1,0,1,1,0,1,Need to focus on Old Inventory Sale. Use GWP products. 
+6,7-3-26 19:46:02,7-3-26 19:47:04,anonymous,,,Subodh,Chetan Chaudhari,"Hamleys - PMC,Pune",THE4,Yogesh Mehta,7-3-2026,1,1,0,Not Applicable,Not Applicable,1,Not Applicable,1,1,1,1,0,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,0,1,1,Not Applicable,Not Applicable,Not Applicable,0,0,0,0,Not Applicable,Not Applicable,0,1,1,1,1,Not Applicable,1,1,1,0,0,0,1,0,1,0,0,Not Applicable,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,0,0,0,0,0,Not Applicable,1,1,1,0,"NSO Pop up store opened on 26.05.26
 Most of basic process yet to start with.
 
 New store code: TCKK"
-7,7-4-26 18:30:46,7-4-26 18:43:13,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Ambuja, Raipur",THQ0,Yogesh Mehta,2026-07-04,1,1,0,1,Not Applicable,1,0,1,1,1,1,1,0,0,0,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,"Overall the store was well maintained considering No SM for few months.
+7,7-4-26 18:30:46,7-4-26 18:43:13,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Ambuja, Raipur",THQ0,Yogesh Mehta,7-4-2026,1,1,0,1,Not Applicable,1,0,1,1,1,1,1,0,0,0,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,"Overall the store was well maintained considering No SM for few months.
 
 Pritam the new SM was absent with no information. 
 Overall hygiene was good. Few store feedback points are shared with Krishna wherever they have lost the points.
 
 "
-8,7-4-26 15:37:00,7-4-26 20:14:15,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,Ham -Phoenix Citadel Indore,T34O,Yogesh Mehta,2026-07-04,1,Not Applicable,0,0,1,1,0,1,1,1,1,1,1,1,0,0,1,1,1,1,Not Applicable,0,1,0,1,1,1,1,0,0,1,1,Not Applicable,1,0,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0,0,1,1,0,0,1,0,0,1,1,1,1,1,1,0,1,1,1,0,1,Store VM needs to be aligned. Segregation of stocks not done. Unnecesaary items from BOH to be removed
-9,7-4-26 20:01:25,7-4-26 20:29:13,anonymous,,,Narayana,Ashlin Moses,Sarath City Capital Mall - Hyd,THP5,Bipro Chatterjee,2026-07-04,1,1,1,1,1,1,0,1,1,0,1,1,0,1,1,1,1,0,1,1,1,1,1,0,1,1,1,Not Applicable,0,1,0,1,0,1,1,0,1,1,0,0,1,1,1,1,1,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,"Store Action Points
+8,7-4-26 15:37:00,7-4-26 20:14:15,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,Ham -Phoenix Citadel Indore,T34O,Yogesh Mehta,7-4-2026,1,Not Applicable,0,0,1,1,0,1,1,1,1,1,1,1,0,0,1,1,1,1,Not Applicable,0,1,0,1,1,1,1,0,0,1,1,Not Applicable,1,0,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0,0,1,1,0,0,1,0,0,1,1,1,1,1,1,0,1,1,1,0,1,Store VM needs to be aligned. Segregation of stocks not done. Unnecesaary items from BOH to be removed
+9,7-4-26 20:01:25,7-4-26 20:29:13,anonymous,,,Narayana,Ashlin Moses,Sarath City Capital Mall - Hyd,THP5,Bipro Chatterjee,7-4-2026,1,1,1,1,1,1,0,1,1,0,1,1,0,1,1,1,1,0,1,1,1,1,1,0,1,1,1,Not Applicable,0,1,0,1,0,1,1,0,1,1,0,0,1,1,1,1,1,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,"Store Action Points
 
 All Queue Managers (Q Managers) and impulse displays must have clear price point signage.
 
@@ -103,20 +103,20 @@ Grooming Key Indicators (KI) and the Grooming Checklist must be implemented and 
 The First Aid Register requires immediate improvement and must be updated as per compliance standards.
 
 The FC Tracker must be maintained regularly and updated accurately on a daily basis."
-10,7-5-26 11:35:17,7-5-26 13:27:19,anonymous,,,Ashlin Moses,Ashlin Moses,Inorbit Mall - Hyd,THJ0,Bipro Chatterjee,2026-07-05,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,Not Applicable,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Play area pe ding points 
+10,7-5-26 11:35:17,7-5-26 13:27:19,anonymous,,,Ashlin Moses,Ashlin Moses,Inorbit Mall - Hyd,THJ0,Bipro Chatterjee,7-5-2026,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,Not Applicable,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Play area pe ding points 
 Manpower plan
 Birthday plan"
-11,7-5-26 13:44:46,7-5-26 14:24:58,anonymous,,,Umesh ,Ashlin Moses,Airport Departure - Blr,TPV5,Bipro Chatterjee,2026-07-05,1,Not Applicable,1,1,Not Applicable,1,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,Not Applicable,0,1,Not Applicable,1,Not Applicable,Not Applicable,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Marutesh was in leave for month due to Medical conditions,given 10 Days to work on BOH Standards and floor upkeep."
-12,7-5-26 16:20:04,7-5-26 17:06:04,anonymous,,,Umesh ,Ashlin Moses,T2 Airport - Blr,T36O,Bipro Chatterjee,2026-07-05,1,Not Applicable,1,1,Not Applicable,0,1,1,1,Not Applicable,1,1,Not Applicable,0,1,1,Not Applicable,Not Applicable,Not Applicable,1,1,1,1,1,1,1,0,Not Applicable,0,Not Applicable,Not Applicable,0,Not Applicable,0,Not Applicable,1,1,Not Applicable,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,Not Applicable,1,0,1,0,0,0,1,Not Applicable,1,1,Not Applicable,Not Applicable,Store looks better than before 
-13,7-5-26 20:11:06,7-5-26 21:02:26,anonymous,,,Harnest,Ashlin Moses,UB City - Blr,THO9,Bipro Chatterjee,2026-07-06,0,1,0,0,Not Applicable,1,1,1,1,1,1,1,1,0,Not Applicable,0,1,Not Applicable,1,0,0,1,1,1,0,0,0,0,Not Applicable,0,0,1,Not Applicable,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,0,0,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,"Overall store looks good, store under staffed.
+11,7-5-26 13:44:46,7-5-26 14:24:58,anonymous,,,Umesh ,Ashlin Moses,Airport Departure - Blr,TPV5,Bipro Chatterjee,7-5-2026,1,Not Applicable,1,1,Not Applicable,1,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,Not Applicable,0,1,Not Applicable,1,Not Applicable,Not Applicable,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Marutesh was in leave for month due to Medical conditions,given 10 Days to work on BOH Standards and floor upkeep."
+12,7-5-26 16:20:04,7-5-26 17:06:04,anonymous,,,Umesh ,Ashlin Moses,T2 Airport - Blr,T36O,Bipro Chatterjee,7-5-2026,1,Not Applicable,1,1,Not Applicable,0,1,1,1,Not Applicable,1,1,Not Applicable,0,1,1,Not Applicable,Not Applicable,Not Applicable,1,1,1,1,1,1,1,0,Not Applicable,0,Not Applicable,Not Applicable,0,Not Applicable,0,Not Applicable,1,1,Not Applicable,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,Not Applicable,1,0,1,0,0,0,1,Not Applicable,1,1,Not Applicable,Not Applicable,Store looks better than before 
+13,7-5-26 20:11:06,7-5-26 21:02:26,anonymous,,,Harnest,Ashlin Moses,UB City - Blr,THO9,Bipro Chatterjee,7-6-2026,0,1,0,0,Not Applicable,1,1,1,1,1,1,1,1,0,Not Applicable,0,1,Not Applicable,1,0,0,1,1,1,0,0,0,0,Not Applicable,0,0,1,Not Applicable,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,0,0,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,"Overall store looks good, store under staffed.
 BOH up keep is good. VM is the concern. Need to close the hiring ASAP. Should work on the points lost and  same as been discussed.."
-14,7-7-26 12:25:17,7-7-26 12:43:34,anonymous,,,Ashish Juyal,Lalit Mohan,Mall of India - Noida,THK0,Bipro Chatterjee,2026-07-06,1,1,0,0,1,1,1,1,0,1,1,0,1,0,1,0,0,Not Applicable,1,0,1,1,1,0,1,1,1,1,1,1,0,1,Not Applicable,0,0,1,1,1,1,1,1,1,1,0,1,0,1,1,1,0,0,0,0,1,0,1,1,Not Applicable,0,0,1,1,1,1,1,1,Not Applicable,1,1,1,1,Not Applicable,Shared detailed report surprise visit feedback  with SM 
-15,7-7-26 18:42:10,7-7-26 18:55:54,anonymous,,,Khubaib,Lalit Mohan,Ham. DelhiT1D,T0ZV,Bipro Chatterjee,2026-07-05,1,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,0,0,1,1,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,1,0,1,Not Applicable,1,1,1,Not Applicable,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,Not Applicable,0,0,1,1,1,1,1,Not Applicable,1,Not Applicable,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,"Critical Points 
+14,7-7-26 12:25:17,7-7-26 12:43:34,anonymous,,,Ashish Juyal,Lalit Mohan,Mall of India - Noida,THK0,Bipro Chatterjee,7-6-2026,1,1,0,0,1,1,1,1,0,1,1,0,1,0,1,0,0,Not Applicable,1,0,1,1,1,0,1,1,1,1,1,1,0,1,Not Applicable,0,0,1,1,1,1,1,1,1,1,0,1,0,1,1,1,0,0,0,0,1,0,1,1,Not Applicable,0,0,1,1,1,1,1,1,Not Applicable,1,1,1,1,Not Applicable,Shared detailed report surprise visit feedback  with SM 
+15,7-7-26 18:42:10,7-7-26 18:55:54,anonymous,,,Khubaib,Lalit Mohan,Ham. DelhiT1D,T0ZV,Bipro Chatterjee,7-5-2026,1,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,0,0,1,1,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,1,0,1,Not Applicable,1,1,1,Not Applicable,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,Not Applicable,0,0,1,1,1,1,1,Not Applicable,1,Not Applicable,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,"Critical Points 
 Break Time Register -	Not Maintained properly 
 VM SIGNAGES	Broken- Need to replace 
 BOH 	Overstocked need to maintain 
 "
-16,7-7-26 18:29:11,7-7-26 19:21:48,anonymous,,,Narayana,Ashlin Moses,L&T Mall - Hyd,THN3,Bipro Chatterjee,2026-07-07,1,1,0,0,Not Applicable,1,0,1,1,0,1,1,0,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,0,0,1,Not Applicable,0,1,1,1,1,0,1,1,1,0,0,0,0,1,0,1,1,0,0,0,1,1,1,1,1,0,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Store Action Points
+16,7-7-26 18:29:11,7-7-26 19:21:48,anonymous,,,Narayana,Ashlin Moses,L&T Mall - Hyd,THN3,Bipro Chatterjee,7-7-2026,1,1,0,0,Not Applicable,1,0,1,1,0,1,1,0,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,0,0,1,Not Applicable,0,1,1,1,1,0,1,1,1,0,0,0,0,1,0,1,1,0,0,0,1,1,1,1,1,0,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Store Action Points
 
 1. Implement the First Aid Register immediately.
 2. Update the daily briefing sheet without fail.
@@ -129,9 +129,9 @@ BOH 	Overstocked need to maintain
 9. Complete BOH section-wise segregation by 15th July.
 10. Improve H+ performance with immediate focus.
 11. Improve the number of customer bills through better conversion and customer engagement."
-17,7-8-26 17:57:11,7-8-26 18:33:57,anonymous,,,Divya Lakshmi,Divya Lakshmi,Ham.Marina,TL6C,Yogesh Mehta,2026-07-08,0,Not Applicable,0,0,Not Applicable,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,Not Applicable,Not Applicable,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Not Applicable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Store Maintenance & VM is very poor. 
+17,7-8-26 17:57:11,7-8-26 18:33:57,anonymous,,,Divya Lakshmi,Divya Lakshmi,Ham.Marina,TL6C,Yogesh Mehta,7-8-2026,0,Not Applicable,0,0,Not Applicable,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,Not Applicable,Not Applicable,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Not Applicable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Store Maintenance & VM is very poor. 
 Need to take action "
-18,7-10-26 14:10:08,7-10-26 14:38:47,anonymous,,,Narayana,Ashlin Moses,Inorbit Mall - Hyd,THJ0,Bipro Chatterjee,2026-07-10,1,1,1,0,1,1,0,1,0,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,Not Applicable,0,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Store Action Points
+18,7-10-26 14:10:08,7-10-26 14:38:47,anonymous,,,Narayana,Ashlin Moses,Inorbit Mall - Hyd,THJ0,Bipro Chatterjee,7-10-2026,1,1,1,0,1,1,0,1,0,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,Not Applicable,0,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Store Action Points
 
 Ensure the Men's Grooming Kit is fully stocked with all the required contents.
 
@@ -148,10 +148,10 @@ Arrange the Teddy Bear costume from L&T for the time being until the new mask is
 Complete and submit the Play RAG by 31st July.
 
 Improve NPS response collection and ensure higher customer participation"
-19,7-10-26 13:20:35,7-10-26 17:51:47,anonymous,,,Umesh ,Ashlin Moses,Mall Of Asia - Blr,T2MI,Bipro Chatterjee,2026-07-10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,Over all store was well maintained attracting and appealing to customers and First time VM I was Happier than Before 
-20,7-12-26 16:47:52,7-12-26 17:53:46,anonymous,,,Shirish Mastud,Shirish Mastud,Ham - Rajkot,T3AA,Yogesh Mehta,2026-07-12,1,0,0,1,Not Applicable,1,0,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,0,Not Applicable,0,0,1,1,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,1,1,Overall the store is good and staff is well groomed. All staff are very much attentive. Focus on doing demo and driving ATV more. Focus on achieving 100% of AOP.
-21,7-14-26 18:40:36,7-14-26 19:07:46,anonymous,,,Khubaib,Lalit Mohan,Logic City Centre - Noida,THF2,Bipro Chatterjee,2026-07-14,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,Not Applicable,1,0,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,Not Applicable,1,1,0,0,1,1,1,0,1,1,1,1,0,0,0,Not Applicable,1,1,1,1,"VM CHECKLIST , SM DAILY FLOOR CHECKLIST , BREAK TIME , TOY TRAINING ( Not filled properly some found filled till 8 July 2026."
-22,7-14-26 19:23:54,7-14-26 19:38:22,anonymous,,,Narayana,Ashlin Moses,GSM Mall - Hyd,TJU3,Bipro Chatterjee,2026-07-14,1,1,1,1,Not Applicable,1,0,1,1,0,1,1,0,1,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,Not Applicable,0,0,1,1,Not Applicable,0,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Store Action Points:
+19,7-10-26 13:20:35,7-10-26 17:51:47,anonymous,,,Umesh ,Ashlin Moses,Mall Of Asia - Blr,T2MI,Bipro Chatterjee,7-10-2026,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,Over all store was well maintained attracting and appealing to customers and First time VM I was Happier than Before 
+20,7-12-26 16:47:52,7-12-26 17:53:46,anonymous,,,Shirish Mastud,Shirish Mastud,Ham - Rajkot,T3AA,Yogesh Mehta,7-12-2026,1,0,0,1,Not Applicable,1,0,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,0,Not Applicable,0,0,1,1,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,1,1,Overall the store is good and staff is well groomed. All staff are very much attentive. Focus on doing demo and driving ATV more. Focus on achieving 100% of AOP.
+21,7-14-26 18:40:36,7-14-26 19:07:46,anonymous,,,Khubaib,Lalit Mohan,Logic City Centre - Noida,THF2,Bipro Chatterjee,7-14-2026,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,Not Applicable,1,0,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,Not Applicable,1,1,0,0,1,1,1,0,1,1,1,1,0,0,0,Not Applicable,1,1,1,1,"VM CHECKLIST , SM DAILY FLOOR CHECKLIST , BREAK TIME , TOY TRAINING ( Not filled properly some found filled till 8 July 2026."
+22,7-14-26 19:23:54,7-14-26 19:38:22,anonymous,,,Narayana,Ashlin Moses,GSM Mall - Hyd,TJU3,Bipro Chatterjee,7-14-2026,1,1,1,1,Not Applicable,1,0,1,1,0,1,1,0,1,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,Not Applicable,0,0,1,1,Not Applicable,0,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Store Action Points:
 Implement the Customer Feedback Book.
 Implement the Lost & Found Register.
 Set up the Customer Escalation Board.
@@ -160,3 +160,369 @@ Activate E-commerce operations.
 Execute price point signage for the impulse section.
 SOM is not being updated. Share the updated photographs by Saturday.
 Focus on RGC and ensure at least one implementation/activity every week."
+23,7-15-26 15:47:05,7-15-26 16:53:19,anonymous,,,Ajay Gill,Ajay Gill,Ambience Gurgaon Mall,THF9,Bipro Chatterjee,7-15-2026,1,1,0,0,Not Applicable,1,Not Applicable,1,1,0,1,0,Not Applicable,0,1,1,1,Not Applicable,1,1,Not Applicable,0,0,0,1,1,1,0,Not Applicable,1,0,1,Not Applicable,Not Applicable,Not Applicable,0,1,1,Not Applicable,1,1,1,0,1,1,0,1,1,1,1,1,Not Applicable,0,0,Not Applicable,0,0,0,0,0,1,1,0,1,1,1,Not Applicable,Not Applicable,1,1,0,1,Need to work on lot of area
+24,7-15-26 19:19:44,7-15-26 19:30:29,anonymous,,,Subodh,Chetan Chaudhari,"Hamleys - ICC, Pune",THI2,Yogesh Mehta,7-12-2026,1,1,1,1,Not Applicable,1,0,1,1,1,1,0,0,0,1,0,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1,1,Not Applicable,1,Not Applicable,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,0,Not Applicable,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,Not Applicable,1,1,1,1,"VM & Dusting was issue, Photo's shared on what's group, SM shared rectified images next day."
+25,7-15-26 19:55:51,7-15-26 20:07:10,anonymous,,,Subodh,Chetan Chaudhari,"Ham - Mall of Millienimium, Pune",T2UO,Yogesh Mehta,7-5-2026,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,0,1,1,1,0,1,1,0,1,1,1,1,Not Applicable,Not Applicable,1,1,1,0,1,1,0,1,1,1,1,1,1,1,0,1,0,1,0,1,1,1,Not Applicable,1,1,0,1,1,Not Applicable,1,1,0,1,0,1,1,1,1,Not Applicable,1,1,1,1,"BOH need to organise, Damage assets kept near Carousal, boys section can be better"
+26,7-16-26 20:26:03,7-16-26 20:50:22,anonymous,,,Paramjeet,Ajay Gill,Ambience Gurgaon Mall,THF9,Bipro Chatterjee,7-16-2026,1,1,0,1,Not Applicable,1,0,1,0,1,1,0,0,0,1,0,1,Not Applicable,1,1,1,0,0,1,1,1,Not Applicable,0,Not Applicable,0,0,1,Not Applicable,Not Applicable,1,1,0,1,1,0,1,0,1,Not Applicable,1,0,1,1,1,0,1,Not Applicable,0,0,1,0,0,0,1,Not Applicable,1,1,0,1,1,1,Not Applicable,Not Applicable,1,1,0,1,"1. Glass cleaning at store facade
+2. Sensomatic gates cleaning
+3. 1 Additional bag bin need to scrapped/Moved
+4. First Kid vinyl, bath tub vinyl need to be changed
+5. Rosada & shifu stock need to be ordered 
+6. Hplus stickers not pasted on products 
+7. hard tag missing on products at floor
+8.  All demo table need to be cleaned
+9. Madmea socks & JW lounge fly bags need to be sent at T1D
+10. Bab bin william creative need to be changed
+11. Jiffy iron not allowed on shop floor
+12. VM issue across store
+13. ID card mail to Anup for all SIS staff
+14. SLOC Hygiene need to be maintained
+15. Ecom orders need to be processed within TAT 
+ "
+27,7-16-26 21:12:11,7-16-26 21:35:31,anonymous,,,Divya Lakshmi,Divya Lakshmi,VR Mall - Chennai,THP1,Yogesh Mehta,7-16-2026,1,1,1,0,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,0,1,0,Not Applicable,1,1,1,Not Applicable,1,1,0,1,1,1,1,1,1,0,1,1,0,1,1,1,0,1,0,0,1,0,1,0,0,0,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,Store BOH to be rearranged and demarcation to be completed. Boxes are on floor. Boh to be maintained properly. Few VM corrections needs attention and cockroach still in BOH area this needs to be controlled.
+28,7-17-26 10:31:15,7-17-26 10:43:10,anonymous,,,Umesh ,Ashlin Moses,Airport Departure - Blr,TPV5,Bipro Chatterjee,7-17-2026,0,Not Applicable,1,1,Not Applicable,1,0,1,1,1,1,1,0,1,1,1,0,Not Applicable,1,1,1,1,1,1,1,0,0,Not Applicable,Not Applicable,1,Not Applicable,Not Applicable,Not Applicable,Not Applicable,0,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,0,1,1,1,1,0,Not Applicable,Not Applicable,1,1,Not Applicable,Not Applicable,Boh needs more work and all Registered and Check list to be Maintained 100%
+29,7-17-26 12:56:55,7-17-26 13:10:17,anonymous,,,Ajay Gill,Ajay Gill,Ambience Vasant Kunj - Delhi,THE8,Bipro Chatterjee,7-17-2026,1,Not Applicable,0,1,0,1,Not Applicable,1,1,1,1,0,1,0,1,0,1,Not Applicable,1,0,Not Applicable,1,1,1,0,1,1,Not Applicable,Not Applicable,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,0,Not Applicable,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,Not Applicable,1,1,0,1,Need to work on all open points 
+30,7-17-26 13:21:50,7-17-26 13:56:55,anonymous,,,Umesh ,Ashlin Moses,T2 Airport - Blr,T36O,Bipro Chatterjee,7-17-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,0,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,1,1,Not Applicable,Not Applicable,1,0,1,0,Not Applicable,1,1,Not Applicable,1,1,Not Applicable,Not Applicable,All Good 
+31,7-17-26 15:02:05,7-17-26 15:22:21,anonymous,,,Narayana,Ashlin Moses,DSL Virtue Mall - Hyd,TJU4,Bipro Chatterjee,7-17-2026,1,1,1,0,Not Applicable,0,0,1,1,0,1,1,0,1,0,1,1,Not Applicable,1,1,1,1,1,0,1,1,Not Applicable,Not Applicable,0,0,1,1,Not Applicable,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Action Points:
+
+1. Customer Escalation Board must be implemented immediately.
+2. Section-wise staff mapping must be completed.
+3. Daily briefing must be conducted without fail.
+4. BOH rack section mapping must be completed.
+5. SOM poster must be updated today by 8:00 PM.
+6. First Aid Register and Lost & Found Register must be implemented immediately.
+7. The requirement for the Customer Feedback Register must be shared with the Marketing team."
+32,7-18-26 12:43:00,7-18-26 13:35:15,anonymous,,,Ashlin Moses,Ashlin Moses,Mall Of Asia - Blr,T2MI,Bipro Chatterjee,7-18-2026,0,1,1,0,0,0,0,1,1,1,0,0,0,0,1,1,1,1,1,1,1,0,0,0,1,1,0,Not Applicable,1,1,0,1,0,1,1,0,1,1,0,1,0,1,0,Not Applicable,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,Facade led to repair
+33,7-18-26 13:40:10,7-18-26 15:54:34,anonymous,,,Harsh Sharma,Ajay Gill,Select City Mall - Delhi,THH3,Bipro Chatterjee,7-18-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,0,0,1,0,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,Not Applicable,Not Applicable,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,0,0,1,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,Not Applicable,Not Applicable,1,1,1,1,"1. As shown, stock from BOH need to be displayed on floor.
+2. Dusting need to be done in art & craft, sports.
+3. Preschool and sports section VM to be done
+4. July demo sheet to be updated.
+5. All signages to be updated as per new format and new birthday easel to be arranged.
+6. Close all demos which are not working and move the same to SLOC 2999. Take approval and open new demos."
+34,7-18-26 15:52:19,7-18-26 16:21:21,anonymous,,,Paramjeet,Ajay Gill,Hamleys - Ham.Airia.Grgn,TJY4,Bipro Chatterjee,7-18-2026,1,1,1,0,Not Applicable,0,0,0,0,0,1,0,0,0,1,1,1,Not Applicable,1,1,0,0,0,1,1,0,Not Applicable,Not Applicable,Not Applicable,0,0,1,Not Applicable,Not Applicable,1,1,1,1,0,1,0,0,1,1,1,0,1,1,1,0,0,Not Applicable,0,1,0,1,0,1,1,1,1,1,1,1,0,0,Not Applicable,Not Applicable,1,1,1,1,"
+1.	Break register not maintained properly 
+2.	Store façade signage work pending 
+3.	Footfall need to be cross checked
+4.	Inward & outward register not maintained 
+5.	NRGP & RGP not maintained while sending stocks
+6.	Additional lease line needs to be applied for store
+7.	Music system not working properly 
+8.	War on zero seller poster not updated
+9.	SOM poster not maintained
+10.	Cash Audit done no variance
+11.	  Float cash not available in cash till, start issuing same
+12.	SM signature not done on petty cash vouchers
+13.	Last MOPR score 75%, action plan not available
+14.	Grooming kit incomplete
+15.	First aid kit incomplete
+16.	Missed call data 50% for last 2 days
+17.	Birthday calling not started
+"
+35,7-18-26 19:25:55,7-18-26 20:05:40,anonymous,,,Paramjeet,Ajay Gill,Ham.Irisbrdway,TL6O,Bipro Chatterjee,7-18-2026,0,Not Applicable,0,0,Not Applicable,1,0,1,0,0,1,1,0,1,1,0,1,Not Applicable,1,1,0,0,1,1,0,1,Not Applicable,Not Applicable,Not Applicable,Not Applicable,1,1,Not Applicable,Not Applicable,1,1,1,1,0,0,1,1,1,1,1,0,1,1,1,0,0,Not Applicable,0,0,1,1,0,1,1,1,1,1,1,1,0,1,1,Not Applicable,1,1,1,1,"1.	Stock gaps can be seen need to work on assortment
+2.	Caseate AC not working 
+3.	Start maintaining full DON in tracker with year & do recalling.
+4.	Store VM is not as per standards
+5.	Grooming kit need to be maintained
+6.	Start declaring cash in attendance register
+7.	Break register not maintained properly track each & every break
+8.	1 Manual bill pending due to offer issue Rs.1047
+9.	Staff sale tracker need to be maintained as per MTD basis currently store is adding monthlky target
+10.	LY old store customer database required for doing calling
+11.	2 bulbs need to be changed in façade
+12.	1 nesting table branding need to be changed 
+13.	Height issue inside BOH
+14.	War on zero sellers poster not updated
+15.	SOM poster not updated 
+16.	Sampark poster need to be updated 
+"
+36,7-19-26 12:03:38,7-19-26 12:28:13,anonymous,,,Nasir Shaikh,Shirish Mastud,Hamleys - T2 Arrival,THJ4,Yogesh Mehta,7-19-2026,1,1,1,1,Not Applicable,0,1,0,1,1,1,1,1,0,Not Applicable,0,Not Applicable,Not Applicable,1,0,1,1,0,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,1,Not Applicable,1,Not Applicable,0,1,1,0,1,1,0,1,1,1,1,1,1,0,1,0,Not Applicable,1,1,1,0,1,Not Applicable,1,Not Applicable,1,0,1,1,1,1,1,Not Applicable,1,1,1,Not Applicable,Store back side arae need to be organised and FC wise sales tracking need to be updated
+37,7-19-26 12:38:39,7-19-26 12:53:57,anonymous,,,Harsh Sharma,Ajay Gill,Pacific Mall - Delhi,THH2,Bipro Chatterjee,7-14-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,0,1,1,1,0,1,1,1,Not Applicable,1,1,1,Not Applicable,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,"-	3 Track lights need to be repaired 
+-	Signages to be displayed – Furjaden, fishing game, hoverboard
+-	All staffs to enter all the break timings in register and not only lunch break.
+-	Nerf section to be displayed on 2 wall bays and remaining 2 wallbays to be used for drones or tracks. Header branding to be changed as per the display through VM team.
+-	Share requirement for ride ons and tesla RC along with the sale data for 3 months
+-	Consumables data to be share every 15 days
+-	WBC data to be sent on every 15th & 30th of the month
+-	Fire exit signage to be displayed
+-	BH approval should be taken for all the manuals 
+"
+38,7-19-26 12:54:02,7-19-26 13:04:01,anonymous,,,Harsh Sharma,Ajay Gill,Hamleys - Vegas Mall  Dwarka,TLX5,Bipro Chatterjee,7-7-2026,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,Not Applicable,1,1,1,Not Applicable,Not Applicable,1,1,1,1,1,1,1,1,1,Not Applicable,1,0,1,1,0,1,1,Not Applicable,0,0,0,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,"1.	Window display to be changed to Spiderman theme
+2.	H stickers to be displayed on all the hotspot products
+3.	Staffs need to enter all the break timings in break register and not only lunch break time.
+4.	Mystery audit score is very low at 87. Start discussing audit points in daily briefing
+5.	Store need to be positive in LFL. Need to 2-3 return gift counters and tele calling conversion as per the target taken for July (6% against customers shopped).
+"
+39,7-19-26 14:22:45,7-19-26 14:28:22,anonymous,,,Ashish Juyal,Lalit Mohan,Gaur City - Noida,THS8,Bipro Chatterjee,7-19-2026,1,1,0,1,1,1,1,1,0,1,1,0,1,0,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,Not Applicable,1,1,0,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,0,0,0,1,1,1,Not Applicable,0,0,0,1,0,0,0,0,1,0,0,1,0,1,1,1,0,Not Applicable,1,1,1,1,Facade signage call log to be done immediately 
+40,7-19-26 13:04:07,7-19-26 15:20:37,anonymous,,,Harsh Sharma,Ajay Gill,Unity Elegante Delhi,TB6V,Bipro Chatterjee,7-19-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,Not Applicable,1,Not Applicable,1,Not Applicable,Not Applicable,1,1,1,1,1,0,1,1,1,Not Applicable,1,0,1,1,0,1,1,0,1,1,0,1,0,1,1,1,1,1,1,1,1,0,Not Applicable,Not Applicable,1,1,1,1,"- Demo register to be updated
+- BOH to be segregated and labelled in this week
+- Gandola height need to be maintained.
+- ATVD to be displayed correctly
+"
+41,7-19-26 15:45:15,7-19-26 16:00:42,anonymous,,,Nasir Shaikh,Shirish Mastud,Hamleys - T1 Arrival,THI8,Yogesh Mehta,7-19-2026,1,Not Applicable,1,1,Not Applicable,1,0,1,1,1,0,0,1,0,Not Applicable,1,Not Applicable,Not Applicable,1,1,1,0,1,Not Applicable,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,1,0,0,Not Applicable,1,1,1,0,1,1,1,1,1,0,0,1,0,1,Not Applicable,0,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,1,1,1,0,1,0,Not Applicable,1,0,1,Not Applicable,Need to work on stocks assortment and cleaning of the store.
+42,7-19-26 23:35:04,7-19-26 23:55:45,anonymous,,,Paramjeet,Ajay Gill,Ardee Mall,THM0,Bipro Chatterjee,7-16-2026,1,1,0,1,Not Applicable,1,1,1,1,0,1,0,0,0,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,Not Applicable,1,Not Applicable,0,1,1,Not Applicable,Not Applicable,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,Not Applicable,0,1,1,1,0,1,1,0,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"* Some letters seems to dull at Facade
+* Start adding comments in daily checklist
+* CN Register maintained till 14th July
+* Break register not maintained properly
+* Ajio 1 order pending for 14th July because reassigned/ Hamleys.in 5 orders more than 48 hours
+* Find discrepancy in 1 article during cross checking Yesterday GC 
+* Stock gaps can be seen in Plush & sports section
+* H loyalty sticker missing on hotspot products
+* Start using bath tub 
+* Soft Tags & Hard tags are missing in some products
+* Need to work on Adidas display & replenishment
+* Branding can be done on sensomatic gates speak with Avanish
+* VM could be better across entire store"
+43,7-19-26 23:54:25,7-19-26 23:58:47,anonymous,,,Damodharan,Divya Lakshmi,Hamleys - T1A,T7UJ,Yogesh Mehta,7-19-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,0,1,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,1,0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,Not Applicable,0,1,1,1,1,1,1,Not Applicable,1,1,1,0,1,0,1,Not Applicable,1,1,1,1,Few VM changes to be corrected. Registers to be filled. BOH to be organised.
+44,7-19-26 23:59:16,7-20-26 0:06:26,anonymous,,,Damodharan,Divya Lakshmi,Ham.Marina,TL6C,Yogesh Mehta,7-15-2026,0,0,1,1,Not Applicable,1,0,0,1,1,1,0,1,0,0,0,1,1,1,1,1,0,1,0,0,1,Not Applicable,Not Applicable,0,1,Not Applicable,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,Not Applicable,0,1,1,1,1,0,0,0,0,1,1,0,0,0,0,Not Applicable,1,1,1,0,Store operations is very poor. Store need to setup in terms of VM & Cleanliness. 
+45,7-20-26 12:01:31,7-20-26 12:11:36,anonymous,,,Ajay Gill,Ajay Gill,Hamleys - Vegas Mall  Dwarka,TLX5,Bipro Chatterjee,7-10-2026,0,1,1,1,Not Applicable,1,Not Applicable,1,1,1,1,0,Not Applicable,0,1,1,1,0,1,1,Not Applicable,1,1,1,0,1,1,Not Applicable,Not Applicable,1,1,1,Not Applicable,Not Applicable,Not Applicable,0,1,1,0,1,1,1,0,1,1,0,1,1,1,1,1,Not Applicable,0,0,0,0,0,0,0,1,0,1,0,1,1,1,0,Not Applicable,1,1,0,1,Need to close all deviations 
+46,7-20-26 16:17:06,7-20-26 17:02:41,anonymous,,,Ashlin Moses,Ashlin Moses,HSR Layout - Blr,TXGB,Bipro Chatterjee,7-20-2026,1,1,1,1,Not Applicable,0,1,1,0,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,Not Applicable,1,1,1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Observation:
+
+Around 80–85% of the team on the floor consists of new staff, including several female employees. To ensure their comfort, safety, and convenience, a dedicated washroom for female staff is required. This will help provide a better working environment and support staff well-being."
+47,7-21-26 10:08:05,7-21-26 10:24:52,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Alpha One, Ahmedabad",THE2,Yogesh Mehta,7-14-2026,1,1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,Overall the store was well maintained. Staff grooming can be improved. Signage’s were missing for offers. BOH can be maintained well. Boxes were on floor. 
+48,7-21-26 10:25:03,7-21-26 10:36:26,anonymous,,,Shirish Mastud,Shirish Mastud,Ham - Palladium Ahmedabad,T77X,Yogesh Mehta,7-15-2026,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,Not Applicable,0,1,1,1,1,1,1,0,1,Not Applicable,1,0,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,Store was well maintained. Manager was on floor interacting with customers. BOH needs to be cleaned. Store shutter and music system were not working. Work on overall sales of Play membership. Birthday party sales to be improved.
+49,7-21-26 13:27:57,7-21-26 14:25:54,anonymous,,,Divya Lakshmi,Divya Lakshmi,Nexus Vijaya Mall - Chennai,THG7,Yogesh Mehta,7-21-2026,0,1,1,1,Not Applicable,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,1,0,Not Applicable,0,1,1,Not Applicable,1,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,Not Applicable,Not Applicable,1,1,0,1,"Store VM correction given, Front nesting table is not proper GWP, Preschool not ok, Race track no demo, briefing Training checklist not maintained, SOM poster not updated. Cash till is messy even CSD. No one at entrance for demo. Ensure all pending points are completed within 2 days."
+50,7-21-26 19:34:20,7-21-26 20:17:03,anonymous,,,Sudhir Singrakhia,Shirish Mastud,"Hamleys - Xperia, Dombivali",THI9,Yogesh Mehta,7-21-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,0,1,0,1,0,Not Applicable,0,1,1,0,1,1,0,1,1,Not Applicable,1,0,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,Not Applicable,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Store facade was clean and deep cleaning conducted today morning
+UPS not working call log done store to follow up n close
+Approval send to ROM to open  Demo SKUs - 3 qty 
+London bus detail cleaning required.
+LEGO Demo unit to be moved to other store.
+New Offer signages to be implement - Bank Offer one.
+Section wise Daily Cleaning plan to maintain.
+VM checklist register to be maintain.
+Staff IN / OUT register to be maintain 
+STOLN fixture is kept at cash counter to be moved sudhir to check.
+At Facade company details address n GST signage is broken as of now removed follow up going with Avanish.
+BOH was well Maintain.
+Staff grooming was up to mark, 
+No old damages are lying in store
+Contactibility, War on zero seller & Star of the month poster are maintained
+Bath tub VINYL to be changed.
+Online no order is pending
+Overall store was maintain well staffs were aware of target vs Ach.
+MTD store is at 104% of AOP target with LFL growth of 19%.
+Area of Opportunity - H Plus enrollment to be at 13% & DS to be at 15%.
+Store window toys to be replaced  OR to be covered with VINYL.
+Arcade games can be planned within store to be checked.
+
+ "
+51,7-22-26 20:38:19,7-22-26 20:47:10,anonymous,,,Divya Lakshmi,Divya Lakshmi,Express Avenue - Chennai,THD8,Yogesh Mehta,7-22-2026,1,1,1,1,Not Applicable,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,Not Applicable,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,"Get BOH demarcation done properly, rabitat fixture get it installed, put farmer marker signage, remove broken acrylic from floor. Update all pending FM issues "
+52,7-23-26 19:48:43,7-23-26 20:11:27,anonymous,,,Virendra Rahevar,Shirish Mastud,Ham.Inorbit Vododara,THG5,Yogesh Mehta,7-23-2026,1,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,0,1,0,0,1,1,1,0,0,0,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"VM to be improved, Friends & family register, first aid register, customer complaint register requires at store, BOH shelves stickering to be done, Grooming concern (Akram-BOH has not shaved)"
+53,7-24-26 14:32:21,7-24-26 14:53:13,anonymous,,,Ajay Gill,Ajay Gill,Pacific Mall - Delhi,THH2,Bipro Chatterjee,7-17-2026,1,1,1,0,Not Applicable,1,Not Applicable,1,1,1,Not Applicable,0,1,0,1,1,1,Not Applicable,1,1,Not Applicable,1,1,0,0,0,1,0,Not Applicable,1,0,1,Not Applicable,Not Applicable,Not Applicable,0,1,1,0,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,0,0,1,1,0,0,0,1,1,1,1,1,1,1,Not Applicable,1,1,0,0,1,Need to close open points
+54,7-24-26 18:45:46,7-24-26 19:06:21,anonymous,,,Narayana,Ashlin Moses,DSL Virtue Mall - Hyd,THJ4,Bipro Chatterjee,7-24-2026,1,1,1,0,Not Applicable,1,0,1,1,0,1,1,1,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,0,1,1,Not Applicable,Not Applicable,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,Not Applicable,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Team,
+
+1. SOM must be updated without fail.
+2. All staff must complete section mapping.
+3. Pending birthday calls to be closed by 28th.
+4. Music license renewal/update needs to be completed.
+5. Store is currently at LFL -23%; focus on achieving daily sales targets and driving recovery.
+6. Individual targets have been assigned. Each staff member must achieve a minimum of:
+   • Weekdays – 6 bills
+   • Weekends – 12 bills
+7. Red Card target for the next 3 days: 5 cards.
+8. Q-line and impulse fixtures must have proper price/signage displayed.
+9. FM shutter issue must be coordinated with the FM team and closed today.
+
+Let's ensure strict execution and timely closure of all the above points."
+55,7-25-26 17:22:02,7-25-26 17:37:44,anonymous,,,Nasir Shaikh,Shirish Mastud,Hamleys - MUMArpt,THF6,Yogesh Mehta,7-25-2026,0,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,0,1,0,Not Applicable,1,Not Applicable,Not Applicable,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,0,0,0,Not Applicable,1,1,1,0,1,1,0,1,1,1,1,1,1,0,0,0,Not Applicable,0,1,0,1,Not Applicable,0,1,Not Applicable,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,Not Applicable,Not Applicable,Flooring tiles need to be replaced MA training role play 
+56,7-26-26 18:06:26,7-26-26 18:57:22,anonymous,,,Sudhir Singrakhia,Shirish Mastud,"Hamleys - Viviana, Thane",THE9,Yogesh Mehta,7-26-2026,1,1,0,1,Not Applicable,1,0,1,1,1,1,0,1,0,0,1,Not Applicable,Not Applicable,1,0,0,1,1,0,1,1,1,1,0,1,1,1,Not Applicable,1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,0,0,1,0,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,"Store was bit crowded being Sunday.
+Store facade wooden figurine are in damage condition.
+Hamleys Signage in Mall word - Y/S is missing , which need to be rectify asap SM Vipin to follow up on same.
+Bath toy tub need to be replaced.
+Plush section has major Stock gaps, checked PO are raised from backend.
+2 Acrylic signage found broken. on floor to be replaced.
+Front nesting table has Spider man n Marvel range displayed.
+Red card cash back offer easle displayed at store entrance
+MNS demo was on in Diaroma, Others in Demo table.
+Cleaning required in all section in details, to be planned daily on weekdays and to clean section wise 
+Mirror Maze has MNR issues, Few LED strip lights is fused, Floor carpet required cleaning and to replace with new in few area.
+First Aid Kit, Foam stick & Helmets were available for Mirror Maze.
+Required cleaning below Race track.
+Cash counter should have 5 ATV displayed, but store has displayed 3 and Back back -GWP.
+Q manager SKU required tagging.
+CSD all online orders packing was is on going.
+BOH should have section wise marking labels.
+All damage chairs to be removed from Staff & Manager rooms.
+All register are maintained Inward/Outward, Opening / Closing & CN register.
+Toy training checklist to maintain.
+Overall staff grooming was upto mark, staff were attending customers and found toy in hand. 
+Required focus on DS currently at 10% , should target for 15% to achieve backlog,
+AOP ach till date is 88%, with 0% LFL.
+Music license is expired SM - Vipin to take it up with Admin team.
+  
+"
+57,7-26-26 19:11:02,7-26-26 19:46:20,anonymous,,,Subodh,Chetan Chaudhari,KOPA,T26L,Yogesh Mehta,7-26-2026,0,1,0,1,1,0,0,1,1,1,1,1,1,0,1,0,1,Not Applicable,1,1,0,0,0,1,1,1,1,Not Applicable,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,0,1,1,1,0,1,0,0,Not Applicable,0,1,0,1,1,1,0,1,1,1,1,0,1,1,Not Applicable,Not Applicable,1,1,1,1,"Found Uboard Hoverboard in BOH, Contact Vendor for refurbish.
+Arrange BOH as Damage inventory went out.
+Credit note register update on priority
+Akshata (Play Pal)was absent"
+58,7-26-26 19:46:26,7-26-26 19:56:03,anonymous,,,Subodh,Chetan Chaudhari,Hamleys Pune Pop up,TCKK,Yogesh Mehta,7-25-2026,1,1,0,1,Not Applicable,1,1,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,Not Applicable,Not Applicable,Not Applicable,0,0,0,0,0,1,1,1,1,1,0,1,1,1,0,1,1,0,0,1,0,0,Not Applicable,1,Not Applicable,1,1,0,1,1,1,1,1,1,0,0,0,0,Not Applicable,1,1,1,1,"As it is Temp store without SLP, I found most of Backend processes of maintaining registers & Inventory management is missing (No BOH).
+"
+59,7-27-26 16:08:53,7-27-26 16:38:15,anonymous,,,Ajay Gill,Ajay Gill,Hamleys - Vegas Mall  Dwarka,TLX5,Bipro Chatterjee,7-17-2026,0,1,1,1,Not Applicable,1,Not Applicable,1,1,0,1,0,Not Applicable,0,1,1,1,1,1,0,Not Applicable,1,1,0,1,1,1,Not Applicable,Not Applicable,Not Applicable,1,1,Not Applicable,Not Applicable,0,1,1,1,0,1,1,1,1,1,1,0,1,0,1,1,1,Not Applicable,0,0,0,0,0,0,0,0,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,0,1,Need to close opening points asap
+60,7-27-26 17:59:48,7-27-26 18:08:05,anonymous,,,Manmohan,Chetan Chaudhari,Hamleys - Quest,THF4,Bipro Chatterjee,7-27-2026,1,1,1,1,Not Applicable,0,1,1,1,1,1,1,1,1,0,1,1,Not Applicable,1,1,0,1,1,1,0,1,0,0,1,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,0,1,Store is looking nice with proper VM 
+61,7-28-26 16:16:34,7-28-26 17:35:40,anonymous,,,Narayana,Ashlin Moses,Banjara Hills  - Hyd,TXSI,Bipro Chatterjee,7-28-2026,1,1,0,1,Not Applicable,1,0,1,1,0,1,1,0,1,1,0,1,Not Applicable,1,1,1,1,1,Not Applicable,1,0,Not Applicable,Not Applicable,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,Not Applicable,0,1,0,0,0,1,0,Not Applicable,0,1,0,1,0,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Team,
+
+1. Inventory hygiene to be maintained and completed.
+2. WBC stickers received – ensure all applicable products are tagged.
+3. First Aid Register to be updated without fail.
+4. Store façade cleaning to be completed.
+5. VM at Ground Floor needs improvement and regular upkeep.
+6. BOH to be organised and set up properly.
+7. Staff briefings must be effective with proper content, KPI focus, and role plays.
+8. SOM Notice Board should be updated and clearly highlighted.
+9. All licences must be printed and displayed on the backend wall.
+
+Please ensure all actions are completed and updated at the earliest."
+62,7-28-26 23:56:39,7-28-26 23:59:39,anonymous,,,Damodharan,Divya Lakshmi,Brookefields Mall - Coimbatore,THF1,Yogesh Mehta,7-28-2026,1,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,1,0,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,good
+63,7-29-26 14:16:52,7-29-26 16:49:33,anonymous,,,Narayana,Ashlin Moses,Sarath City Capital Mall - Hyd,THP5,Bipro Chatterjee,7-29-2026,1,1,1,1,1,1,0,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,"Store Action Points
+
+1. New demo approval mail needs to be raised by SD, as the store currently lacks attractive self-demo displays to engage customers.
+2. Carnival-side branding layer is peeling off and needs to be fixed properly.
+3. Impulse fixture price points (PP) need to be updated.
+4. Customer Feedback Register requirement to be discussed with the VM team and planned for implementation across all stores by SD.
+5. SOM is not up to date and requires immediate attention.
+6. BOH needs to be arranged and maintained properly.
+7. BOH stock receiving and GRN process needs to be streamlined and followed consistently.
+8. BOH racks are not labelled and need proper identification.
+9. First Aid Register must be updated immediately and maintained regularly."
+64,7-29-26 18:41:21,7-29-26 18:47:18,anonymous,,,Damodharan,Divya Lakshmi,Prozone mall - Coimbatore,THI3,Yogesh Mehta,7-29-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,"Lighting to be improved. Old Mfg to be liquidated, Ecom damages to be closed."
+65,7-31-26 12:42:00,7-31-26 12:47:45,anonymous,,,Manmohan,Chetan Chaudhari,Hamleys - South city,THR3,Yogesh Mehta,7-31-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,0,1,1,Not Applicable,1,1,1,0,0,1,1,1,1,1,0,0,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,0,0,1,1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,0,1,"Need to do more on the reports as its not maintained, even need to work on BOH "
+66,7-31-26 19:19:31,7-31-26 20:30:18,anonymous,,,Virendra Rahevar,Shirish Mastud,Ham - Palladium Ahmedabad,T77X,Yogesh Mehta,7-31-2026,1,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,1,Not Applicable,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"VM to be more sharp as discussed & shown by example on floor, R&M issues to be followed up, Grooming to be cut edge, BOH to be sort out with excess stock movement"
+67,7-31-26 20:38:51,7-31-26 20:49:47,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,"Ham - Mall of Millienimium, Pune",T2UO,Yogesh Mehta,7-29-2026,1,1,0,1,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,0,1,1,0,0,1,Store BOH needs segregation. VM headers to match actual stock. Promoters to wear brand uniforms. All Registers need to be maintained
+68,7-31-26 20:49:56,7-31-26 21:01:00,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,"Hamleys - ICC, Pune",THI2,Yogesh Mehta,7-25-2026,1,1,0,1,Not Applicable,1,0,0,1,0,0,0,1,0,1,0,1,1,1,1,0,0,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1,0,1,1,0,0,1,0,0,0,1,0,1,0,1,1,1,1,0,1,0,1,0,0,1,All registers need to be maintained. Staff need to be aware of ongoing offers and incentive structure
+69,7-31-26 21:01:03,7-31-26 21:12:25,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,KOPA,T26L,Yogesh Mehta,7-22-2026,1,1,1,1,1,1,0,0,1,1,0,Not Applicable,1,1,1,0,1,1,1,0,0,0,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1,1,1,0,0,1,1,0,0,0,0,0,1,0,1,0,1,0,1,1,1,1,0,1,0,1,0,0,1,Store register needs to be maintained. Store Stock display to be better. VM to be aligned
+70,7-31-26 21:14:00,7-31-26 21:22:11,anonymous,,,Chetan Chaudhari,Chetan Chaudhari,Hamleys Pune Pop up,TCKK,Yogesh Mehta,7-27-2026,1,1,1,1,Not Applicable,1,Not Applicable,0,1,1,Not Applicable,1,Not Applicable,1,1,1,Not Applicable,1,1,1,0,1,0,Not Applicable,1,1,Not Applicable,1,Not Applicable,Not Applicable,1,0,0,0,0,Not Applicable,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,0,Not Applicable,Not Applicable,Not Applicable,Not Applicable,0,Not Applicable,Not Applicable,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,0,0,1,TCKK is a Pop Up Store. 
+71,7-31-26 23:47:56,7-31-26 23:52:45,anonymous,,,Damodharan,Divya Lakshmi,Nexus Vijaya Mall - Chennai,THG7,Yogesh Mehta,7-31-2026,1,1,0,1,Not Applicable,1,1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,0,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,Need to work on Store lighting & Stock gaps to be closed. Manpower to be aligned & gaps to be closed. Staffs to be trained on Ecom & backend ops.
+72,7-31-26 23:51:12,7-31-26 23:56:31,anonymous,,,Virendra Rahevar,Shirish Mastud,Ham. Golden Icon,THS6,Yogesh Mehta,7-23-2026,1,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,1,Not Applicable,1,1,0,1,0,1,1,1,1,Not Applicable,0,1,1,1,0,1,0,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,0,1,0,0,0,0,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Boh to be emptied,  girls & sports section vm to be improved, devaluation section vm was poor."
+73,7-31-26 23:52:51,7-31-26 23:56:44,anonymous,,,Damodharan,Divya Lakshmi,Phoenix Marketcity - Chennai,THF0,Yogesh Mehta,7-27-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,VM is good. Staff gaps to be closed. Need to rectify Entrance Signage lighting issue.
+74,8-1-26 0:04:45,8-1-26 0:09:07,anonymous,,,Damodharan,Divya Lakshmi,Hamleys Play PMCC,T61F,Yogesh Mehta,7-24-2026,0,Not Applicable,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,Not Applicable,0,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,Cleanliness to be taken care. Staff to be manned all time in each attractions. Need to engage with more fun activities.
+75,7-31-26 23:58:20,8-1-26 0:10:47,anonymous,,,Harnest,Ashlin Moses,Phoenix Marketcity - Blr,THE0,Bipro Chatterjee,7-31-2026,1,0,0,1,1,1,1,1,0,1,1,0,1,0,1,0,1,Not Applicable,1,0,1,1,1,1,1,0,1,1,Not Applicable,0,1,1,Not Applicable,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1,Not Applicable,1,1,1,1,1,"Point have been discussed with prem. 
+Need to close the BOH points in priority "
+76,8-1-26 8:56:04,8-1-26 9:07:51,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Mall De, Goa",THM8,Yogesh Mehta,7-24-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,0,1,0,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,Not Applicable,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,"Overall store was well maintained. Few sectional changes highlighted to Jayashankara. 
+Team is fairly new and they need training. Overall store needs to achieve sale of 20 lacs to come out of LMS, same has been discussed with SM."
+77,8-1-26 9:08:17,8-1-26 9:18:22,anonymous,,,Shirish Mastud,Shirish Mastud,Ham - Goa Airport,T42C,Yogesh Mehta,7-25-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,0,Not Applicable,0,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,0,Not Applicable,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,Flights of Indigo have dropped and impacting the overall sales. asked team to focus on Hookaba and other high value ranges. Store is looking good. Need to focus on ATV as FF remains a concern.
+78,8-1-26 15:52:47,8-1-26 15:57:38,anonymous,,,Almas Zaidi,Shirish Mastud,Hamleys - HN Hospital,TMA0,Yogesh Mehta,7-28-2026,1,1,1,Not Applicable,Not Applicable,1,Not Applicable,1,1,0,1,1,0,0,Not Applicable,1,Not Applicable,1,1,0,1,1,1,0,0,1,Not Applicable,Not Applicable,1,1,1,1,0,1,Not Applicable,1,1,1,1,0,1,1,1,1,Not Applicable,Not Applicable,1,Not Applicable,1,1,Not Applicable,Not Applicable,Not Applicable,1,1,0,1,1,1,1,0,1,1,1,1,1,Not Applicable,Not Applicable,1,0,1,1,Zuber and Amant need to make the necessary improvements shared on mail
+79,8-1-26 16:19:53,8-1-26 16:24:28,anonymous,,,Ashlin Moses,Ashlin Moses,Vega City Mall - Blr,TZ8Z,Bipro Chatterjee,7-31-2026,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,Not Applicable,0,1,1,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,Not Applicable,1,1,1,1,"Na Cash till experience was not good, to enhance, with proper rota"
+80,8-1-26 16:26:11,8-1-26 16:34:53,anonymous,,,Ashlin Moses,Ashlin Moses,Phoenix Marketcity - Blr,THE0,Bipro Chatterjee,8-1-2026,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,Wh is still not seggregated
+81,8-1-26 16:05:11,8-1-26 16:42:40,anonymous,,,Khubaib,Lalit Mohan,Hamleys - T1 Arrival,TASG,Bipro Chatterjee,8-1-2026,1,Not Applicable,1,0,Not Applicable,1,1,1,1,1,1,1,1,0,0,0,1,0,1,1,1,0,0,1,1,1,Not Applicable,Not Applicable,0,1,Not Applicable,1,1,1,Not Applicable,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,Not Applicable,1,1,Not Applicable,1,Not Applicable,Not Applicable,1,1,1,Not Applicable,1,1,0,Not Applicable,1,1,Not Applicable,Not Applicable,"Issues found - 
+Found expiry medicine ( SM discarded it during the visit ) 
+VM is not up to mark gandola headers are hidden from the stocks .
+Found damaged products and packaging on the shelfs . 
+Staff is not following the Duty roaster timings as per approved ROTA . 
+
+
+"
+82,8-1-26 16:16:05,8-1-26 16:43:16,anonymous,,,Sudhir Singrakhia,Shirish Mastud,Hamleys - JWD,TY4T,Yogesh Mehta,7-14-2026,1,1,1,1,Not Applicable,1,1,0,1,1,1,0,1,0,1,1,Not Applicable,Not Applicable,1,1,0,1,1,0,1,0,Not Applicable,Not Applicable,0,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,Not Applicable,0,Not Applicable,0,0,0,0,0,0,1,0,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Store Maintain New SM Daily Floor walk & Daily briefing checklist.
+BOH is in not good condition boxes were kept in BOH
+Store Facade signage not working, required Scissor lift to clean store is following up with mall to provide scissor lift. 
+Facade glass cleaning required .
+Front demo table has color chipped and ceiling required white painting already informed FM team .
+Trolley & 1 box lying below demo table need to be cleared asap.
+Q manager required VM and check for soft & hard tags put up on SKUs.
+Demo table near board game required cleaning.
+Suggested daily Cleaning register to maintain at store.
+Overall store look n feel was good , apart from MNR issues of Facade .
+MIKO display unit need to be replaced with new one in discussion with MIKO team - 
+Register are maintained at store.
+Store AOP ach is below target, focus required on DS .
+Area of improvement Hplus enrolment & Red card attachment %.
+
+
+
+
+
+    "
+83,8-1-26 16:26:17,8-1-26 16:43:41,anonymous,,,Shirish Mastud,Shirish Mastud,"Hamleys - Infinty, Malad",THD9,Yogesh Mehta,7-30-2026,0,1,1,0,Not Applicable,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,0,1,1,1,Not Applicable,1,1,1,1,1,0,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,"Store needs to come out of LMS Plan.
+Need to ideally do sale of 3 lacs from mirror maze. Focus on Hplus needs above 13%.
+Ganesh to focus on ATV Drivers sale. Lego section planned."
+84,8-1-26 16:04:38,8-1-26 16:47:43,anonymous,,,Lalit P Mohan,Lalit Mohan,Mall of India - Noida,THK0,Bipro Chatterjee,7-15-2026,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,0,1,1,1,1,1,1,1,0,1,0,0,0,1,1,1,0,1,1,0,1,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,Not Applicable,"Break register not maintained, Teddy walk not happening."
+85,8-1-26 16:52:42,8-1-26 16:56:47,anonymous,,,Ashlin Moses,Ashlin Moses,1 MG - Lido Mall  - Blr,THG4,Bipro Chatterjee,7-1-2026,1,1,1,1,Not Applicable,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,Ok
+86,8-1-26 17:00:08,8-1-26 17:03:55,anonymous,,,Ashlin Moses,Ashlin Moses,LULU Bangalore,TL9A,Bipro Chatterjee,7-4-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,0,1,1,1,1,0,0,1,1,1,1,1,0,1,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Density and top 200 correction 
+87,8-1-26 17:04:26,8-1-26 17:10:07,anonymous,,,Ashlin Moses,Ashlin Moses,Ham.GarudaMall,TK0G,Bipro Chatterjee,7-10-2026,0,1,1,1,Not Applicable,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,0,0,1,Not Applicable,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,0,0,1,1,0,1,1,1,1,1,Not Applicable,1,1,0,1,Manager to be hired and closed asap
+88,8-1-26 16:51:51,8-1-26 17:12:37,anonymous,,,Lalit P Mohan,Lalit Mohan,Logic City Centre - Noida,THF2,Bipro Chatterjee,7-16-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,0,1,1,0,1,0,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,0,1,1,1,1,0,0,0,0,1,1,1,1,1,0,0,Not Applicable,1,1,1,Not Applicable,Most of the checklists are not maintained. 
+89,8-1-26 17:04:59,8-1-26 17:20:36,anonymous,,,Almas Zaidi,Shirish Mastud,"Ham - Kurla, PMC",T8LI,Yogesh Mehta,8-10-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,0,Not Applicable,1,1,Not Applicable,1,0,1,1,1,0,1,1,1,1,Not Applicable,1,1,Not Applicable,Not Applicable,Not Applicable,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,Not Applicable,Not Applicable,1,1,1,1,"Mostly maintained, Feedback for improvements shared on mail"
+90,8-1-26 17:12:47,8-1-26 17:23:32,anonymous,,,Lalit P Mohan,Lalit Mohan,Gaur City - Noida,THS8,Bipro Chatterjee,7-17-2026,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,0,1,1,1,1,0,1,1,1,0,0,1,1,Not Applicable,1,1,1,1,1,1,0,1,1,1,0,1,0,0,1,1,0,1,0,0,1,0,0,0,0,0,1,0,1,1,1,1,1,0,Not Applicable,1,1,1,Not Applicable,Checklist not maintained. Headers and signages were missing. 
+91,8-1-26 16:46:29,8-1-26 17:35:31,anonymous,,,Sudhir Singrakhia,Shirish Mastud,"Hamleys - Oberoi, Goregaon",THJ2,Yogesh Mehta,7-17-2026,1,1,1,1,Not Applicable,0,1,0,1,1,1,0,0,0,1,1,1,Not Applicable,1,1,0,0,1,0,1,1,0,0,Not Applicable,1,1,0,Not Applicable,1,1,0,1,1,0,1,1,1,1,0,1,1,0,Not Applicable,0,1,1,0,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,Not Applicable,1,1,1,1,"Store maintain New RM Daily floor walk & Briefing checklist at store.
+The Back Office (BOH) was found to be untidy, with packed boxes lying around. BOH must remain organized and clutter-free at all times to ensure operational efficiency and safety.
+All operational registers were not updated. Please ensure every register is maintained accurately and updated on a daily basis without exception.
+The cash counter requires thorough cleaning and should always be maintained in a neat and presentable condition.
+The Customer Service Desk (CSD) also requires immediate cleaning. All tape marks should be removed, and any unwanted or unused materials lying at the counter should be cleared to maintain a professional appearance.
+Time for School danglers are still displayed on the shop floor. As the campaign has ended, ensure all outdated POSM is removed immediately.
+Ride-On Section: All open display ride-on cars must be checked for functionality. Ensure every unit is fully operational, clean, charged (where applicable), and customer-ready.
+Nerf Wall Bay: VM standards are not being maintained. Please realign the display as per the approved planogram and ensure the bay is well-stocked and neatly presented.
+Q Manager SKU Display: Merchandise should be displayed vertically to improve visibility and customer navigation. Ensure all SKUs have the appropriate soft/hard security tags attached.
+Staff Engagement: Team members should proactively carry a toy in hand while engaging with customers to demonstrate products and create an interactive shopping experience.
+Plush Section: The overall setup requires improvement. Merchandise should be arranged neatly, replenished regularly, and displayed as per VM guidelines to enhance the visual appeal of the section.
+Please ensure all the above action points are completed on priority. Going forward, daily floor walks should be conducted by the Store Manager to maintain VM standards, housekeeping, product functionality, and customer readiness at all times. I expect these observations to be closed immediately and sustained consistently.
+
+"
+92,8-1-26 17:29:34,8-1-26 17:42:41,anonymous,,,Almas Zaidi,Shirish Mastud,"Hamleys - Infinty, Malad",THD9,Yogesh Mehta,7-1-2026,1,1,1,1,Not Applicable,1,1,1,1,1,0,0,0,0,1,1,Not Applicable,1,1,0,1,1,1,0,1,0,0,1,Not Applicable,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,0,1,1,1,0,1,0,1,1,1,1,0,0,1,1,1,1,1,Feedback shared with Ganesh
+93,8-1-26 17:23:39,8-1-26 17:43:57,anonymous,,,Lalit P Mohan,Lalit Mohan,Ham. DelhiT1D,T0ZV,Bipro Chatterjee,7-18-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,0,0,Not Applicable,1,Not Applicable,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,Not Applicable,1,1,1,1,1,Not Applicable,0,Not Applicable,1,1,1,0,1,1,0,Not Applicable,1,1,1,Not Applicable,Plan IST from T3A. 
+94,8-1-26 17:44:00,8-1-26 17:50:19,anonymous,,,Lalit P Mohan,Lalit Mohan,Hamleys - T1 Arrival,TASG,Bipro Chatterjee,7-18-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,Not Applicable,Not Applicable,0,0,Not Applicable,1,Not Applicable,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,Not Applicable,1,1,1,1,1,1,0,Not Applicable,1,1,1,Not Applicable,Store was well maintained.
+95,8-1-26 17:50:22,8-1-26 17:55:22,anonymous,,,Lalit P Mohan,Lalit Mohan,Hamleys - DelhiT3,THF8,Bipro Chatterjee,7-18-2026,1,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,Not Applicable,Not Applicable,Not Applicable,1,0,Not Applicable,1,Not Applicable,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,Not Applicable,Not Applicable,0,0,0,0,0,0,1,Not Applicable,1,1,1,1,1,1,0,Not Applicable,1,1,1,Not Applicable,"BOH is over stocked, move 6k qtys to DC. "
+96,8-1-26 17:36:36,8-1-26 18:01:37,anonymous,,,Sudhir Singrakhia,Shirish Mastud,Hamleys - Nexus Seawood,THH8,Yogesh Mehta,7-2-2026,1,1,1,1,Not Applicable,0,1,1,1,1,1,0,1,0,1,1,Not Applicable,Not Applicable,1,0,0,1,1,0,1,1,1,1,Not Applicable,1,1,1,Not Applicable,1,1,0,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,0,1,0,1,0,0,0,1,1,1,1,1,0,0,0,Not Applicable,1,1,1,1,"Overall, the store presentation and customer experience were good. The store look and feel was positive, and it is evident that efforts have been made to improve standards. Below are the observations and action points:
+
+Positives
+Overall store look and feel was good.
+All relevant promotional and operational signages were displayed.
+Ride-on section fencing has been completed.
+BOH condition has improved significantly compared to the previous visit.
+Team members were well groomed and actively engaging customers with ""Toy in Hand"", demonstrating good customer service standards.
+Store has achieved 100% AOP, which is a commendable performance.
+Areas of Improvement
+Q Manager VM to be corrected by displaying SKUs in a vertical format as per VM guidelines.
+Cash counter requires thorough cleaning. Remove excess stock from the counter and maintain only 5 display variants.
+CSD signages are missing. Follow up with Avanish for the creative and ensure it is installed at the earliest.
+Daily cleaning register should be maintained consistently and updated every day.
+Remove all unwanted cartons from BOH and scrap the unused shoe rack at the earliest.
+IT materials lying in BOH should be followed up with the IT team for immediate pickup.
+Pest control treatment is required in the BOH area.
+Replace the damaged Bath Toy demo tub.
+Deep clean all slat walls to improve overall visual appeal.
+London Bus branding (Peppa Pig / Paw Patrol) to be executed as suggested by the Business Head. Awaiting update from Avanish.
+Store has pending MNR issues which need regular follow-up:
+Facade has visible colour variation.
+Ceiling clouds have visible marks that require rectification.
+Ensure the planned Carnival launch is completed by the middle of the month as per the agreed timeline.
+Business Focus
+While the store has achieved 100% AOP, the immediate focus should be on improving Hamleys Plus (H+) and Red Card enrolments to ensure monthly targets are achieved consistently.
+
+Please ensure all action points are closed within the committed timelines and maintain the momentum on store standards and customer experience."
+97,8-1-26 17:59:52,8-1-26 18:12:03,anonymous,,,Divya Lakshmi,Divya Lakshmi,Phoenix Marketcity - Chennai,THF0,Yogesh Mehta,7-23-2026,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,Not Applicable,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,1,"BOH area demarcation to be done, lots of old materials are still kept not cleared, old documents are still not cleared follow up and close. Hiring is still not closed fill rate is less than 70%. Morning shift ensure more staff available. Update checklist on Spiderman popup."
+98,8-1-26 18:12:07,8-1-26 18:26:56,anonymous,,,Divya Lakshmi,Divya Lakshmi,Hamleys Play PMCC,T61F,Yogesh Mehta,7-23-2026,0,Not Applicable,0,0,1,0,Not Applicable,1,1,1,1,1,1,1,1,1,1,Not Applicable,1,1,0,0,Not Applicable,Not Applicable,Not Applicable,1,1,Not Applicable,Not Applicable,Not Applicable,1,1,Not Applicable,1,1,1,1,1,1,Not Applicable,1,0,0,0,0,0,1,1,Not Applicable,1,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,Not Applicable,1,1,1,1,"Lots of Old posters are still in BOH remove immediately, SOM poster is not updated, remove all Old posters, under donut space still unwanted materials are kept not cleared. No one reporting as per Duty roster shift timing. Manpower fill rate is very poor and no improvement on attrition control. Put Supervisor Sangeetha on PIP informed already still not processed. Consent form is faded and not readable staff collecting the forms as same. Ensure proper consent forms collected. Sunboard standee communication is damaged get fresh one. 5 pack Hotwheels 2 qty taped together do not take combined and sell as combo not allowed. Need manpower fill to go above 90%. Ensure to maintain toy training and retail sales not picking up. Staff grooming is not as per standards. Ensure grooming kit available for staffs."
+99,8-1-26 18:39:36,8-1-26 18:50:19,anonymous,,,Sarath SG,Divya Lakshmi,Gokulam Galleria - Calicut,TUW4,Yogesh Mehta,7-25-2026,0,Not Applicable,1,1,Not Applicable,1,0,1,1,1,1,0,1,1,1,1,Not Applicable,1,1,1,0,0,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,0,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,1,1,1,0,Not Applicable,1,1,0,1,Store BOH was a mess and lot of undeclared damages still at the site.Instructed DSM to give the complete scan data in 2 weeks time.Store VM looks OK but could found stock gaps across few sections.
+100,8-1-26 18:17:41,8-1-26 18:55:03,anonymous,,,Sudhir Singrakhia,Shirish Mastud,"Ham - Rcity Mall, Ghatkopar",T7ZN,Yogesh Mehta,7-20-2026,1,1,1,1,Not Applicable,1,1,1,1,1,1,0,1,0,1,1,Not Applicable,Not Applicable,1,0,0,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,Not Applicable,1,1,1,1,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,1,1,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,"Overall Positives:
+
+BOH was well maintained and housekeeping standards have improved.
+LEGO branding within the store has been executed well and is looking impactful.
+Girls' grooming standards were good and maintained as per expectations.
+Hplus attachment target ach is 100%
+Store entrance 2 easel standee are displayed Carnival & Hplus.
+
+Action Required:
+
+Ensure section-wise stock segregation is maintained in the BOH for better stock identification and replenishment.
+Two broken acrylic signages were found on the sales floor. Remove and replace them immediately.
+Store front flooring requires maintenance. Follow up with the concerned team for rectification.
+At the Personalisation Counter, replenish the alphabet inventory, especially letters A and S, to avoid customer inconvenience.
+Farmer Market stock level is very low. Refill the section immediately and highlight the replenishment requirement to the BNM Category team.
+LEGO Diorama should have an open product display. Coordinate with the vendor to arrange and maintain the display.
+Check all Ride-On display cars for working condition, battery status, cleanliness, and functionality.
+Focus on improving boys' grooming standards, which were found below the expected level. Ensure complete adherence to grooming SOPs.
+At the Carnival area, ensure a dedicated staff member is deployed to actively engage customers using the microphone.
+Ensure one complimentary Carnival game is offered with every eligible retail bill as per the ongoing initiative.
+Maintain and update the Daily Cleaning Task Tracker without fail to ensure accountability and consistent housekeeping standards.
+
+Expectation:
+Please close all the above action points on priority and sustain the standards consistently through regular monitoring and follow-up."
+101,8-1-26 19:02:22,8-1-26 19:10:41,anonymous,,,Sarath SG,Divya Lakshmi,Forum Mall - Kochi,T2WF,Yogesh Mehta,7-4-2026,1,1,1,1,Not Applicable,1,0,1,1,1,1,1,0,1,1,1,1,0,1,1,0,1,1,1,1,1,1,Not Applicable,Not Applicable,1,1,1,0,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1,1,0,1,1,1,1,0,Not Applicable,1,1,0,1,Carnival few lights to be changed.BOH completely choked with stocks.No communication for carnival offer was found.Rack alignment missing on few sections.Store overall VM looks OK but not so impactful.Kiosk to be repositioned and changeover to be done to Hotwheels stocks
+102,8-1-26 18:55:22,8-1-26 19:25:50,anonymous,,,Sudhir Singrakhia,Shirish Mastud,Ham. Sky City,TF5Y,Yogesh Mehta,7-23-2026,1,Not Applicable,1,1,Not Applicable,0,1,1,1,1,1,0,1,0,1,1,Not Applicable,Not Applicable,1,1,0,1,1,0,0,1,Not Applicable,Not Applicable,Not Applicable,1,Not Applicable,1,Not Applicable,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,1,1,1,Not Applicable,1,0,1,1,0,1,0,0,1,1,1,1,1,Not Applicable,0,Not Applicable,1,1,1,1,"Store achieved 100% target – good performance.
+1 Trainee DSM is under training; continue regular coaching.
+VM is satisfactory; ensure all dioramas have open products displayed.
+Plush and Ride-On sections have stock gaps; follow up with BNM and plan IST for Ride-On.
+Replace Time for School merchandise with Time for College or Spider-Man/Marvel merchandise.
+All store registers are maintained properly.
+Bear costume not available , Shopping Bag Stand, not available
+Grooming Kit to procure at the earliest.
+BOH is clean and organized; remove unwanted materials (wooden shelf, podium, Christmas décor, flooring tiles).
+Staff grooming is satisfactory.
+Ensure the daily cleaning tracker is maintained consistently."
+103,8-1-26 19:23:01,8-1-26 19:32:38,anonymous,,,Ashlin Moses,Ashlin Moses,Falcon City - Blr,T36H,Bipro Chatterjee,7-9-2026,1,1,1,1,Not Applicable,0,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,"Store Manager Sign was not there on entry exit rigister, SM Not wearing name badge"
