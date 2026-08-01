@@ -281,15 +281,13 @@ const Q_END   = 80;   // inclusive — 69 questions (checklist edited: Q9, Q29, 
 const Q_COUNT = Q_END - Q_START + 1; // 69
 
 // q1/qN are POSITIONAL indices within Q_START..Q_END (not printed form
-// question numbers) — remapped to match the edited checklist. Positions
-// 68-69 (trailing 2 Compliance questions, since removed from the form)
-// are intentionally left uncovered so they're never scored/displayed.
+// question numbers) — remapped to match the edited checklist.
 const SECTIONS = [
   { key:'foh', label:'FOH & Visual Merchandising', q1:1,  qN:26 },
   { key:'csd', label:'Customer Service & Till',    q1:27, qN:37 },
   { key:'ppl', label:'People & Training',          q1:38, qN:49 },
   { key:'boh', label:'Back of House & Inventory',  q1:50, qN:63 },
-  { key:'com', label:'Compliance & Admin',          q1:64, qN:67 },
+  { key:'com', label:'Compliance & Admin',          q1:64, qN:69 },
 ];
 
 /* ─── SCORING ─── */

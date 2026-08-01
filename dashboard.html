@@ -527,20 +527,17 @@ const CONFIG = {
 };
 
 /* ═══ CONSTANTS ═══ */
-// Checklist was edited in stages: Q9 (store temperature), Q29 (customer
-// feedback register), and Q33 (Friends & Family register) were removed
-// first; then the two trailing Compliance questions — "Distance Sale /
-// Space & Sales Mix / Density / T500 / Freshness reports" and "Store
-// Opening/Closing Register" — were dropped too. q1/qN below are
-// POSITIONAL indices within Q_START..Q_END (not the printed form question
-// number). Positions 68-69 are intentionally left uncovered by any
-// section below, so they're simply never scored or displayed.
+// Checklist was edited: Q9 (store temperature), Q29 (customer feedback
+// register), and Q33 (Friends & Family register) were removed, leaving
+// 69 questions instead of 72. q1/qN below are POSITIONAL indices within
+// the Q_START..Q_END column range (not the printed form question number),
+// remapped to match where each surviving question now actually sits.
 const SECTIONS = [
   { key:'foh', label:'FOH & Visual Merchandising', short:'FOH & VM',    q1:1,  qN:26 },
   { key:'csd', label:'Customer Service & Till',    short:'CSD & Till',  q1:27, qN:37 },
   { key:'ppl', label:'People & Training',          short:'People',      q1:38, qN:49 },
   { key:'boh', label:'Back of House & Inventory',  short:'BOH & Inv',   q1:50, qN:63 },
-  { key:'com', label:'Compliance & Admin',         short:'Compliance',  q1:64, qN:67 },
+  { key:'com', label:'Compliance & Admin',         short:'Compliance',  q1:64, qN:69 },
 ];
 
 /* ═══ STATE ═══ */
