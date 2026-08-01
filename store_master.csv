@@ -8,7 +8,7 @@ THF0,PMC Chennai,Yogesh Mehta,Damodharan,Divya Lakshmi,Chennai
 THF1,Brookfields Coimbatore,Yogesh Mehta,Damodharan,Divya Lakshmi,Coimbatore
 THF2,Logix Mall Noida,Bipro Chatterjee,Khubaib,Lalit Mohan,Noida
 THF4,Quest Kolkatta,Yogesh Mehta,Manmohan,Chetan Chaudhari,Kolkata
-THF6,Mumbai T2D Airport,Yogesh Mehta,Nasir Shaikh,Shirish Mastud,Mumbai Airport
+THF6,Mumbai T2D Airport,Yogesh Mehta,Nasir Shaikh,Shirish Mastud,Mumbai
 THF9,Amb Gurg Delhi,Bipro Chatterjee,Paramjeet,Ajay Gill,Gurgaon
 THG0,Lulu Mall,Yogesh Mehta,Divya Lakshmi,Divya Lakshmi,Kochi
 THG2,Treasure Island Indore,Yogesh Mehta,Chetan Chaudhari,Chetan Chaudhari,Indore
@@ -19,10 +19,10 @@ THG7,Forum Chennai,Yogesh Mehta,Damodharan,Divya Lakshmi,Chennai
 THG8,Pavilion Ludhiana,Bipro Chatterjee,Lalit Mohan,Lalit Mohan,Ludhiana
 THH3,Delhi Selectcity,Bipro Chatterjee,Harsh Sharma,Ajay Gill,Delhi
 THH8,L&T Seawoods,Yogesh Mehta,Sudhir Singrakhia,Shirish Mastud,Mumbai
-THF8,Delhi T3A Airport,Bipro Chatterjee,Khubaib,Lalit Mohan,Delhi Airport
+THF8,Delhi T3A Airport,Bipro Chatterjee,Khubaib,Lalit Mohan,Delhi
 THH2,Delhi Pacific,Bipro Chatterjee,Harsh Sharma,Ajay Gill,Delhi
 THI5,Vega Siliguri,Yogesh Mehta,Manmohan,Chetan Chaudhari,Siliguri
-THI8,Mumbai Airport T1 Arrival,Yogesh Mehta,Nasir Shaikh,Shirish Mastud,Mumbai Airport
+THI8,Mumbai Airport T1 Arrival,Yogesh Mehta,Nasir Shaikh,Shirish Mastud,Mumbai
 THI2,ICC Pune,Yogesh Mehta,Subodh,Chetan Chaudhari,Pune
 THI7,WTP Jaipur,Bipro Chatterjee,Ajay Gill,Ajay Gill,Jaipur
 THJ0,"Inorbit Mall, Hyderabad",Bipro Chatterjee,Narayana,Ashlin Moses,Hyderabad
@@ -43,7 +43,7 @@ THQ0,Ambuja Raipur,Yogesh Mehta,Virendra Rahevar,Shirish Mastud,Raipur
 THR0,D Centre Vijaywada,Bipro Chatterjee,Narayana,Ashlin Moses,Vijayawada
 THM0,"Ardee Mall, Gurgaon",Bipro Chatterjee,Paramjeet,Ajay Gill,Gurgaon
 THP5,Sarath City Capital,Bipro Chatterjee,Ashlin Moses,Ashlin Moses,Hyderabad
-THJ4,Mumbai T2A,Yogesh Mehta,Nasir Shaikh,Shirish Mastud,Mumbai Airport
+THJ4,Mumbai T2A,Yogesh Mehta,Nasir Shaikh,Shirish Mastud,Mumbai
 THP7,Wave mall Jammu,Bipro Chatterjee,Lalit Mohan,Lalit Mohan,Jammu
 THS5,Brigade Orion,Bipro Chatterjee,Harnest,Ashlin Moses,Bangalore
 THS6,Golden Icon,Yogesh Mehta,Virendra Rahevar,Shirish Mastud,Vadodara
@@ -60,7 +60,7 @@ THR3,South City Mall,Yogesh Mehta,Manmohan,Chetan Chaudhari,Kolkata
 TJY4,Airia mall,Bipro Chatterjee,Paramjeet,Ajay Gill,Gurgaon
 TJU6,Palassio Lucknow,Bipro Chatterjee,Ashish Juyal,Lalit Mohan,Lucknow
 TLX5,Vegas dwarka,Bipro Chatterjee,Harsh Sharma,Ajay Gill,Delhi
-TPV5,Bangalore Departure,Bipro Chatterjee,Umesh,Ashlin Moses,Bangalore Airport
+TPV5,Bangalore Departure,Bipro Chatterjee,Umesh,Ashlin Moses,Bangalore
 TXPH,Ambala,Bipro Chatterjee,Harsh Sharma,Ajay Gill,Ambala
 TWR1,Vizag,Bipro Chatterjee,Narayana,Ashlin Moses,Vizag
 TXGB,HSR,Bipro Chatterjee,Umesh,Ashlin Moses,Bangalore
@@ -74,7 +74,7 @@ TXSI,HYD BANJARA HILLS,Bipro Chatterjee,Ashlin Moses,Ashlin Moses,Hyderabad
 TUW4,Gokulam,Yogesh Mehta,Sarath,Divya Lakshmi,Calicut
 TY7V,Hilite,Yogesh Mehta,Sarath,Divya Lakshmi,Calicut
 TZ8Z,Vega City,Bipro Chatterjee,Umesh,Ashlin Moses,Bangalore
-TASG,Delhi Airport T1A,Bipro Chatterjee,Khubaib,Lalit Mohan,Delhi Airport
+TASG,Delhi Airport T1A,Bipro Chatterjee,Khubaib,Lalit Mohan,Delhi
 TAUN,Udhaipur Celebration,Bipro Chatterjee,Ajay Gill,Ajay Gill,Udhaipur
 T42A,Lulu Trivandrum,Yogesh Mehta,Sarath,Divya Lakshmi,Trivandrum
 TXR2,Zirakpur,Bipro Chatterjee,Harsh Sharma,Ajay Gill,Zirakpur
@@ -97,7 +97,7 @@ T2WF,Forum Kochi,Yogesh Mehta,Sarath,Divya Lakshmi,Kochi
 T6AA,PROZONE,Yogesh Mehta,Subodh,Chetan Chaudhari,Aurangabad
 T2UO,Wakad PUNE MOM,Yogesh Mehta,Subodh,Chetan Chaudhari,Pune
 T7UJ,Chennai T1A,Yogesh Mehta,Damodharan,Divya Lakshmi,Chennai
-T0ZV,Delhi T1D,Bipro Chatterjee,Khubaib,Lalit Mohan,Delhi Airport
+T0ZV,Delhi T1D,Bipro Chatterjee,Khubaib,Lalit Mohan,Delhi
 T3AA,Rajkot,Yogesh Mehta,Virendra Rahevar,Shirish Mastud,Rajkot
 TB2N,"Palladium, Mumbai (Relocation)",Yogesh Mehta,Almas Zaidi,Shirish Mastud,Mumbai
 THG9,DB City Bhopal,Yogesh Mehta,Virendra Rahevar,Shirish Mastud,Bhopal
