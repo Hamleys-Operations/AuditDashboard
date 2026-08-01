@@ -164,6 +164,7 @@ select.fs:focus,input.fs:focus{outline:none;border-color:var(--red);box-shadow:0
 .stbl td.r{text-align:right;color:var(--muted)}
 .stbl tr:last-child td{border-bottom:none}
 .stbl tr:hover td{background:var(--bg)}
+#comp-rom-table tbody tr:not(.det-row), #comp-sd-table tbody tr:not(.det-row){cursor:pointer}
 .sp{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:700}
 .sp-g{background:var(--green-bg);color:var(--green)}
 .sp-a{background:var(--amber-bg);color:var(--amber)}
@@ -1225,8 +1226,49 @@ function computeCompletion(names, storeCodesByName) {
     });
     const audited = auditedSet.size;
     const pct = total ? (audited / total * 100) : null;
-    return { name: n, total, audited, pct };
+    return { name: n, total, audited, pct, codes: [...codes] };
   }).sort((a, b) => (b.pct ?? -1) - (a.pct ?? -1));
+}
+
+// Builds the expandable per-store breakdown shown when a ROM/SD row is
+// clicked: every store assigned to them, whether THEY personally visited
+// it (not someone else), their latest score if so, and the visit date.
+function buildCompletionDetail(name, codes) {
+  if (!codes.length) return '<div style="color:var(--muted);font-size:12px;padding:4px 0">No stores assigned</div>';
+  const items = codes.map(code => {
+    const m = storeMaster.get(code) || {};
+    const own = filteredRows.filter(r => r.auditor === name && r.code === code);
+    own.sort((a, b) => (b.ts || 0) - (a.ts || 0));
+    const latest = own[0] || null;
+    return {
+      code,
+      store: m.name || code,
+      city: m.city || '—',
+      visited: !!latest,
+      score: latest ? latest.overall : null,
+      date: latest ? latest.date : null,
+      visits: own.length,
+    };
+  });
+  items.sort((a, b) => {
+    if (a.visited !== b.visited) return a.visited ? -1 : 1;
+    return (a.store || '').localeCompare(b.store || '');
+  });
+  const rows = items.map(it => `
+    <tr>
+      <td style="font-weight:600;color:var(--navy)">${it.store}</td>
+      <td>${it.code}</td>
+      <td>${it.city}</td>
+      <td class="r">${it.visited
+        ? `<span class="sp ${scCls(it.score)}">${it.score!==null ? it.score.toFixed(0)+'%' : '—'}</span>`
+        : `<span class="sev sev-c">Not Visited</span>`}</td>
+      <td class="r" style="white-space:nowrap">${it.date || '—'}</td>
+    </tr>`).join('');
+  return `
+    <table class="stbl">
+      <thead><tr><th>Store</th><th>Site Code</th><th>City</th><th class="r">Score</th><th class="r">Last Visit</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
 }
 
 function renderCompletionRows(tbodyId, rows, emptyLabel) {
@@ -1235,13 +1277,31 @@ function renderCompletionRows(tbodyId, rows, emptyLabel) {
     tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;padding:20px;color:var(--muted)">${emptyLabel}</td></tr>`;
     return;
   }
-  tbody.innerHTML = rows.map(r => `
-    <tr>
+  tbody.innerHTML = '';
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
       <td style="font-weight:600;color:var(--navy)">${r.name}</td>
       <td class="r">${r.total}</td>
       <td class="r">${r.audited}</td>
-      <td class="r"><span class="sp ${scCls(r.pct)}">${r.pct!==null ? r.pct.toFixed(0)+'%' : '—'}</span></td>
-    </tr>`).join('');
+      <td class="r"><span class="sp ${scCls(r.pct)}">${r.pct!==null ? r.pct.toFixed(0)+'%' : '—'}</span></td>`;
+
+    const detRow = document.createElement('tr');
+    detRow.className = 'det-row';
+    const detTd = document.createElement('td');
+    detTd.colSpan = 4;
+    detTd.innerHTML = `<div class="det-inner">${buildCompletionDetail(r.name, r.codes)}</div>`;
+    detRow.appendChild(detTd);
+
+    tr.onclick = () => {
+      const wasOpen = detRow.classList.contains('open');
+      tbody.querySelectorAll('.det-row.open').forEach(x => x.classList.remove('open'));
+      if (!wasOpen) detRow.classList.add('open');
+    };
+
+    tbody.appendChild(tr);
+    tbody.appendChild(detRow);
+  });
 }
 
 function buildCompCityOptions() {
