@@ -396,7 +396,7 @@ table.sct tbody tr.open-row{background:#fef5f5}
         <div class="kc-lbl">Critical Stores</div>
         <div class="kc-val red" id="k-crit">—</div>
         <div class="kc-trend"></div>
-        <div class="kc-sub">Below 50%</div>
+        <div class="kc-sub">Below 65%</div>
       </div>
       <div class="kc amber">
         <div class="kc-lbl">Total Audits</div>
@@ -963,7 +963,7 @@ function renderKPIs() {
   document.getElementById('k-avg').textContent   = avgScore!==null ? avgScore.toFixed(1)+'%' : '—';
   document.getElementById('k-total').textContent = filteredRows.length;
 
-  const crit = mostRecent(filteredRows).filter(r=>r.overall!==null&&r.overall<50);
+  const crit = mostRecent(filteredRows).filter(r=>r.overall!==null&&r.overall<65);
   document.getElementById('k-crit').textContent = crit.length;
 
   // Store Coverage — how many distinct stores (out of every store on
