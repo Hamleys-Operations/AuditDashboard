@@ -527,12 +527,17 @@ const CONFIG = {
 };
 
 /* ═══ CONSTANTS ═══ */
+// Checklist was edited: Q9 (store temperature), Q29 (customer feedback
+// register), and Q33 (Friends & Family register) were removed, leaving
+// 69 questions instead of 72. q1/qN below are POSITIONAL indices within
+// the Q_START..Q_END column range (not the printed form question number),
+// remapped to match where each surviving question now actually sits.
 const SECTIONS = [
-  { key:'foh', label:'FOH & Visual Merchandising', short:'FOH & VM',    q1:1,  qN:27 },
-  { key:'csd', label:'Customer Service & Till',    short:'CSD & Till',  q1:28, qN:40 },
-  { key:'ppl', label:'People & Training',          short:'People',      q1:41, qN:52 },
-  { key:'boh', label:'Back of House & Inventory',  short:'BOH & Inv',   q1:53, qN:66 },
-  { key:'com', label:'Compliance & Admin',         short:'Compliance',  q1:67, qN:72 },
+  { key:'foh', label:'FOH & Visual Merchandising', short:'FOH & VM',    q1:1,  qN:26 },
+  { key:'csd', label:'Customer Service & Till',    short:'CSD & Till',  q1:27, qN:37 },
+  { key:'ppl', label:'People & Training',          short:'People',      q1:38, qN:49 },
+  { key:'boh', label:'Back of House & Inventory',  short:'BOH & Inv',   q1:50, qN:63 },
+  { key:'com', label:'Compliance & Admin',         short:'Compliance',  q1:64, qN:69 },
 ];
 
 /* ═══ STATE ═══ */
@@ -565,10 +570,10 @@ function avg(arr){ return arr.length ? arr.reduce((a,b)=>a+b,0)/arr.length : nul
 // Column layout matching the real Microsoft Forms export:
 // [0]ID [1]Start time [2]Completion time [3]Email [4]Name
 // [5]Last modified time [6]Name of Auditor [7]ROM [8]Store Name
-// [9]Store Code [10]Regional Manager [11]Date of Visit [12..83]Q1..Q72
+// [9]Store Code [10]Regional Manager [11]Date of Visit [12..80]Q1..Q69 (checklist edited)
 const META = { auditor:6, rom:7, store:8, code:9, rm:10, date:11 };
 const Q_START = 12;
-const Q_END   = 83;
+const Q_END   = 80; // was 83 — checklist edited, 3 questions removed (69 remain)
 const Q_COUNT = Q_END - Q_START + 1;
 
 function parseAns(v) {
